@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الموسوعة الأكاديمية الشاملة للتصميم الميكانيكي — ME323</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Fontsource Fonts -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cairo@5.0.6/arabic-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cairo@5.0.6/arabic-600-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cairo@5.0.6/arabic-700-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cairo@5.0.6/arabic-800-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/latin-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/latin-600-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/latin-700-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fira-code@5.0.8/latin-500-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fira-code@5.0.8/latin-700-normal.css">
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  svg: { fontCache: 'global' },
+  startup: { typeset: true }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+:root{ --bg-main:#070b14; --card-bg:#0f172a; --card-bd:#1e293b; --teal-glow:#14b8a6; --cyan-glow:#06b6d4; --amber-glow:#f59e0b; --indigo-glow:#6366f1; }
+body{ font-family:'Cairo',system-ui,-apple-system,sans-serif; background-color:var(--bg-main); color:#e2e8f0; scroll-behavior:smooth; }
+.font-en{ font-family:'Inter',system-ui,sans-serif; }
+.font-mono-code{ font-family:'Fira Code',monospace; }
+::-webkit-scrollbar{ width:6px; height:6px; }
+::-webkit-scrollbar-track{ background:#070b14; }
+::-webkit-scrollbar-thumb{ background:#1e293b; border-radius:4px; }
+::-webkit-scrollbar-thumb:hover{ background:#0d9488; }
+.no-scrollbar::-webkit-scrollbar{ display:none; }
+.no-scrollbar{ -ms-overflow-style:none; scrollbar-width:none; }
+.nav-btn.active{ background:linear-gradient(135deg,#0d9488 0%,#0f766e 100%); color:#ffffff; border-color:#2dd4bf; box-shadow:0 0 16px rgba(20,184,166,0.4); }
+.nav-btn.past-btn.active{ background:linear-gradient(135deg,#b45309 0%,#78350f 100%); border-color:#fbbf24; box-shadow:0 0 16px rgba(245,158,11,0.4); }
+.opt-btn{ transition:all 0.2s cubic-bezier(0.4,0,0.2,1); }
+.opt-btn:hover:not(:disabled){ border-color:#14b8a6; background-color:rgba(20,184,166,0.12); transform:translateX(-3px); }
+.opt-btn.correct{ background-color:rgba(34,197,94,0.25)!important; border-color:#22c55e!important; color:#86efac!important; font-weight:700; }
+.opt-btn.wrong{ background-color:rgba(239,68,68,0.25)!important; border-color:#ef4444!important; color:#fca5a5!important; }
+.glass-card{ background:rgba(15,23,42,0.92); backdrop-filter:blur(12px); border:1px solid var(--card-bd); }
+.highlight-badge{ background:rgba(20,184,166,0.15); border:1px solid rgba(20,184,166,0.4); color:#5eead4; }
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<header class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-teal-950 to-slate-900 border-b border-teal-900/60 py-8 px-4 sm:px-6 shadow-2xl">
+  <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#14b8a6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+  <div class="max-w-7xl mx-auto text-center relative z-10">
+    <div class="inline-flex items-center gap-2 bg-teal-500/10 border border-teal-500/30 rounded-full px-4 py-1.5 text-xs font-bold text-teal-300 mb-3">
+      <i class="fa-solid fa-graduation-cap text-teal-400"></i> التفريغ الأكاديمي الموسع والشامل · ME323 / همك 333
+    </div>
+    <h1 class="text-2xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-cyan-300 to-sky-200 mb-3 tracking-tight">
+      🎯 الموسوعة الشاملة لمراجعة ليلة الامتحان — التصميم الميكانيكي
+    </h1>
+    <p class="text-slate-300 text-xs sm:text-sm max-w-4xl mx-auto leading-relaxed mb-5">
+      تفريغ كامل لكافة شرائح ومحاضرات وشيتات د. محمد عثمان بالإنجليزي مع شرح عربي هندسي دقيق + شبكة العلاقات الرياضية والتناسبات الطردية والعكسية + حلول كافة التمارين التسعة + بنك الامتحانات السابقة الكامل (82 سؤالاً تفاعلياً).
+    </p>
+    <div class="flex flex-wrap gap-2 justify-center text-xs font-semibold">
+      <span class="bg-slate-800/90 border border-slate-700/80 rounded-full px-3 py-1 text-slate-300"><i class="fa-solid fa-book-open text-teal-400 ml-1"></i> تفريغ كامل لـ 4 وحدات</span>
+      <span class="bg-slate-800/90 border border-slate-700/80 rounded-full px-3 py-1 text-slate-300"><i class="fa-solid fa-link text-cyan-400 ml-1"></i> شبكة العلاقات والتناسبات</span>
+      <span class="bg-slate-800/90 border border-slate-700/80 rounded-full px-3 py-1 text-slate-300"><i class="fa-solid fa-calculator text-emerald-400 ml-1"></i> حلول 9 تمارين شيتات</span>
+      <span class="bg-amber-500/10 border border-amber-500/30 rounded-full px-3 py-1 text-amber-300"><i class="fa-solid fa-star text-amber-400 ml-1"></i> 162 سؤالاً بالحل والتفسير</span>
+    </div>
+  </div>
+</header>
+
+<nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-xl px-2 py-2">
+  <div class="max-w-7xl mx-auto flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-1">
+    <button class="nav-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-slate-700 bg-slate-800 text-slate-300 hover:text-white transition whitespace-nowrap" onclick="switchTab('sec-cheat', this)"><i class="fa-solid fa-bolt text-amber-400 ml-1"></i> القوانين والخطة</button>
+    <button class="nav-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-slate-700 bg-slate-800 text-slate-300 hover:text-white transition whitespace-nowrap" onclick="switchTab('sec-rel', this)"><i class="fa-solid fa-arrow-trend-up text-cyan-400 ml-1"></i> شبكة العلاقات والتناسبات</button>
+    <button class="nav-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-slate-700 bg-slate-800 text-slate-300 hover:text-white transition whitespace-nowrap" onclick="switchTab('sec-u1', this)"><i class="fa-solid fa-compass ml-1"></i> Unit 1 · Introduction</button>
+    <button class="nav-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-slate-700 bg-slate-800 text-slate-300 hover:text-white transition whitespace-nowrap" onclick="switchTab('sec-u2', this)"><i class="fa-solid fa-arrows-split-up-and-left ml-1"></i> Unit 2 · Stress & Failure</button>
+    <button class="nav-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-slate-700 bg-slate-800 text-slate-300 hover:text-white transition whitespace-nowrap" onclick="switchTab('sec-u3', this)"><i class="fa-solid fa-shield-halved text-teal-400 ml-1"></i> Unit 3 · Fatigue Failure</button>
+    <button class="nav-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-slate-700 bg-slate-800 text-slate-300 hover:text-white transition whitespace-nowrap" onclick="switchTab('sec-u4', this)"><i class="fa-solid fa-gears text-indigo-400 ml-1"></i> Unit 4 · Shaft Design</button>
+    <button class="nav-btn past-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-amber-600/60 bg-amber-950/40 text-amber-300 hover:text-white hover:bg-amber-800 transition whitespace-nowrap" onclick="switchTab('sec-pe', this)"><i class="fa-solid fa-box-archive ml-1"></i> الامتحانات السابقة (82 سؤال)</button>
+    <button class="nav-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-indigo-700 bg-indigo-950/40 text-indigo-300 hover:text-white hover:bg-indigo-800 transition whitespace-nowrap" onclick="switchTab('sec-calc', this)"><i class="fa-solid fa-calculator ml-1"></i> الحاسبة الهندسية</button>
+  </div>
+</nav>
+
+<main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 py-8">
+
+<!-- ================= CHEAT SHEET ================= -->
+<section id="sec-cheat" class="tab-content block space-y-6">
+  <div class="glass-card p-6 rounded-2xl border-l-4 border-teal-500 shadow-xl">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="p-3 bg-teal-500/20 text-teal-400 rounded-xl"><i class="fa-solid fa-compass text-xl"></i></div>
+      <div>
+        <h2 class="text-xl font-bold text-teal-300">خطة ليلة الامتحان الشاملة وصيد درجات الـ MCQs</h2>
+        <p class="text-xs sm:text-sm text-slate-400">تحليل دقيق لأسلوب د. محمد عثمان في صياغة أسئلة الاختيار من متعدد للمقرر</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mt-4">
+      <div class="bg-slate-900/70 p-4 rounded-xl border border-slate-800">
+        <h4 class="font-bold text-cyan-300 mb-2 flex items-center gap-1.5"><i class="fa-solid fa-crosshairs"></i> طبيعة الأسئلة</h4>
+        <p class="text-slate-300 text-xs leading-relaxed">
+          • <b class="text-teal-300">70% أسئلة مفاهيمية وعلاقات طردية/عكسية</b> (مثل: <i>paramount, synthesis, weakest link, beach marks, force of law, deflection by geometry</i>).<br>
+          • <b class="text-teal-300">30% حسابات سريعة خطوة واحدة</b> (معادلة مارين، حساب $K_f$ من $q$، قطر العمود المبسط، سودربرج وجودمان).
+        </p>
+      </div>
+      <div class="bg-slate-900/70 p-4 rounded-xl border border-slate-800">
+        <h4 class="font-bold text-amber-300 mb-2 flex items-center gap-1.5"><i class="fa-solid fa-route"></i> مسار المذاكرة السريع</h4>
+        <p class="text-slate-300 text-xs leading-relaxed">
+          1. <b>Unit 3 (Fatigue)</b>: ثلثا أسئلة الامتحان (مراحل الكلال، مارين، $q$، الإجهاد المتوسط).<br>
+          2. <b>Unit 4 (Shafts)</b>: القاعدة الذهبية، التبسيط $M_m=0, T_a=0$، والريشة كـ Weakest Link.<br>
+          3. <b>Unit 1 & 2</b>: الأخلاقيات، المعايير، دائرة مور، ونظريات الانهيار.<br>
+          4. <b>حل بنك الامتحانات السابقة كاملاً (82 سؤالاً)</b>.
+        </p>
+      </div>
+      <div class="bg-slate-900/70 p-4 rounded-xl border border-slate-800">
+        <h4 class="font-bold text-emerald-300 mb-2 flex items-center gap-1.5"><i class="fa-solid fa-shield"></i> قواعد فخاخ الامتحان الذهبية</h4>
+        <p class="text-slate-300 text-xs leading-relaxed">
+          • التحميل المحوري (Axial) $\implies$ <b class="text-emerald-400">$k_b = 1.0$ دائماً</b>.<br>
+          • الحديد الزهر (Cast Iron) $\implies$ <b class="text-emerald-400">$q = 0.20$ ثابتة</b>.<br>
+          • إذا عُرفت $S_{ut}$ عند حرارة التشغيل $\implies$ <b class="text-emerald-400">$k_d = 1.0$</b>.<br>
+          • انحراف وصلادة العمود $\implies$ <b class="text-emerald-400">Geometry NOT Material</b>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 shadow-xl space-y-4">
+    <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2 border-b border-slate-700 pb-3">
+      <i class="fa-solid fa-square-root-variable"></i> ورقة القوانين والمعادلات الذهبية المعتمدة (Formula Sheet)
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-slate-900/85 p-4 rounded-xl border border-slate-800 space-y-2.5">
+        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">Fatigue & Marin Equations</span>
+        <div class="bg-slate-950 p-2.5 rounded-lg text-center font-mono-code text-cyan-300 text-sm overflow-x-auto">$$S_e = k_a \cdot k_b \cdot k_c \cdot k_d \cdot k_e \cdot k_f \cdot S_e'$$</div>
+        <div class="bg-slate-950 p-2.5 rounded-lg text-center font-mono-code text-cyan-300 text-xs overflow-x-auto">$$S_e' = 0.5 S_{ut} \ (S_{ut} \le 1400 \text{ MPa}) \quad | \quad S_e' = 700 \text{ MPa} \ (S_{ut} > 1400)$$</div>
+        <div class="bg-slate-950 p-2.5 rounded-lg text-center font-mono-code text-cyan-300 text-xs overflow-x-auto">$$K_f = 1 + q(K_t - 1) \quad \iff \quad q = \frac{K_f - 1}{K_t - 1}$$</div>
+        <div class="bg-slate-950 p-2.5 rounded-lg text-center font-mono-code text-cyan-300 text-xs overflow-x-auto">$$\sigma_m = \frac{\sigma_{\max}+\sigma_{\min}}{2}, \quad \sigma_a = \frac{\sigma_{\max}-\sigma_{\min}}{2}, \quad R = \frac{\sigma_{\min}}{\sigma_{\max}}$$</div>
+      </div>
+      <div class="bg-slate-900/85 p-4 rounded-xl border border-slate-800 space-y-2.5">
+        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">Failure Criteria & Shaft Sizing Equations</span>
+        <div class="bg-slate-950 p-2.5 rounded-lg text-center font-mono-code text-cyan-300 text-xs overflow-x-auto">$$\text{Soderberg: } \frac{\sigma_a}{S_e} + \frac{\sigma_m}{S_y} = \frac{1}{n} \quad | \quad \text{Goodman: } \frac{\sigma_a}{S_e} + \frac{\sigma_m}{S_{ut}} = \frac{1}{n}$$</div>
+        <div class="bg-slate-950 p-2.5 rounded-lg text-center font-mono-code text-cyan-300 text-xs overflow-x-auto">$$\text{Rotating Shaft: } d^3 = \frac{16n}{\pi} \left[ \frac{2 K_f M_a}{S_e} + \frac{\sqrt{3} K_{fs} T_m}{S_{ut}} \right]$$</div>
+        <div class="bg-slate-950 p-2.5 rounded-lg text-center font-mono-code text-cyan-300 text-xs overflow-x-auto">$$\sigma_{1,2} = \frac{\sigma_x+\sigma_y}{2} \pm \sqrt{\left(\frac{\sigma_x-\sigma_y}{2}\right)^2 + \tau_{xy}^2}, \quad \tau_{\max} = \frac{\sigma_1 - \sigma_3}{2}$$</div>
+        <div class="bg-slate-950 p-2.5 rounded-lg text-center font-mono-code text-cyan-300 text-xs overflow-x-auto">$$\text{Thin Wall } (t \le r_i/10): \sigma_t = \frac{p r_i}{t} = \frac{p d_i}{2t}, \quad \sigma_l = \frac{p r_i}{2t} = \frac{p d_i}{4t}$$</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RELATIONSHIPS ================= -->
+<section id="sec-rel" class="tab-content hidden space-y-6">
+  <div class="glass-card p-6 rounded-2xl border-r-4 border-cyan-500 shadow-xl">
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-cyan-500/20 text-cyan-400 rounded-xl"><i class="fa-solid fa-arrow-trend-up text-2xl"></i></div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-cyan-300">🔗 شبكة العلاقات الطردية والعكسية وتأثير المتغيرات (Exam Proportionality Matrix)</h2>
+        <p class="text-xs sm:text-sm text-slate-400">تجميع شامل لكافة القواعد والأسئلة المفاهيمية من نمط: (عند زيادة / نقصان المتغير X ماذا يحدث لـ Y؟)</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+    <div class="glass-card p-5 rounded-2xl border border-slate-700 space-y-2">
+      <div class="flex items-center justify-between border-b border-slate-700 pb-2">
+        <b class="text-amber-300 font-en">1. Effect of Operating Temperature</b>
+        <span class="highlight-badge px-2 py-0.5 rounded text-xs">تأثير درجة الحرارة</span>
+      </div>
+      <p class="font-en text-slate-200 text-left" dir="ltr">
+        • <b>When operating temperature INCREASES significantly above room temperature:</b>
+        <br>&rarr; Material tensile strength $S_{ut}$ <b>decreases</b>.
+        <br>&rarr; Marin temperature modifying factor $k_d$ <b>decreases below 1.0</b>.
+        <br>&rarr; Fully corrected endurance limit $S_e$ <b>decreases</b>.
+        <br>&rarr; Fatigue life (cycles to failure $N$) <b>decreases</b>.
+        <br>&rarr; <b>Golden Rule:</b> If $S_{ut}$ is already determined at the operating temperature &rArr; <b>$k_d = 1.0$</b>.
+      </p>
+      <p class="text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-cyan-300">الشرح بالعربي:</b> عند ارتفاع درجة حرارة التشغيل تضعف متانة المعدن، فيهبط معامل الحرارة $k_d$ تحت 1.0، مما يؤدي إلى انخفاض حد التحمل $S_e$ ونقصان عمر الكلال. وإذا عُرفت المتانة أصلاً عند حرارة التشغيل نضع $k_d=1.0$.</p>
+    </div>
+    <div class="glass-card p-5 rounded-2xl border border-slate-700 space-y-2">
+      <div class="flex items-center justify-between border-b border-slate-700 pb-2">
+        <b class="text-amber-300 font-en">2. Effect of Component Size & Diameter</b>
+        <span class="highlight-badge px-2 py-0.5 rounded text-xs">تأثير حجم وقطر العضو</span>
+      </div>
+      <p class="font-en text-slate-200 text-left" dir="ltr">
+        • <b>When shaft diameter / component size INCREASES:</b>
+        <br>&rarr; Volume & surface area subjected to high stress <b>increase</b>.
+        <br>&rarr; Probability of micro-flaws and material defects <b>increases</b>.
+        <br>&rarr; Marin size factor $k_b = (d/7.62)^{-0.107}$ <b>decreases</b>.
+        <br>&rarr; Modified endurance limit $S_e$ <b>decreases</b>.
+        <br>&rarr; <b>Axial Loading Exception:</b> For pure axial loads, stress is uniform throughout the entire cross-section &rArr; <b>$k_b = 1.0$ (NO size effect)</b>.
+      </p>
+      <p class="text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-cyan-300">الشرح بالعربي:</b> زيادة قطر العمود تزيد من احتمالية وجود عيوب تصنيعية مجهرية، فيهبط معامل الحجم $k_b$ ويقل حد التحمل. أما في التحميل المحوري فالإجهاد منتظم تماماً وبلا تدرج لذا يكون $k_b=1.0$ دائماً.</p>
+    </div>
+    <div class="glass-card p-5 rounded-2xl border border-slate-700 space-y-2">
+      <div class="flex items-center justify-between border-b border-slate-700 pb-2">
+        <b class="text-amber-300 font-en">3. Effect of Notch Radius & Fillet Geometry</b>
+        <span class="highlight-badge px-2 py-0.5 rounded text-xs">تأثير نصف قطر الحز والشطفة</span>
+      </div>
+      <p class="font-en text-slate-200 text-left" dir="ltr">
+        • <b>When notch root radius $r$ becomes SMALLER (Sharper corner):</b>
+        <br>&rarr; Notch radius ratio $(r/d)$ <b>decreases</b>.
+        <br>&rarr; Theoretical stress concentration factor $K_t$ <b>INCREASES</b>.
+        <br>&rarr; Fatigue notch factor $K_f$ <b>INCREASES</b>.
+        <br>&rarr; Peak localized alternating stress $\sigma_{\text{peak}} = K_f \sigma_a$ <b>INCREASES</b>.
+        <br>&rarr; Factor of safety $n$ and fatigue life <b>DECREASE dramatically</b>.
+        <br>• <b>When using a generous, large fillet radius:</b> $K_t$ <b>decreases</b> &rArr; fatigue resistance <b>increases</b>.
+      </p>
+      <p class="text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-cyan-300">الشرح بالعربي:</b> كلما كانت الزاوية حادة ونصف قطرها صغيراً، تزاحمت خطوط الإجهاد وارتفع $K_t$ و $K_f$ مما يقلل معامل الأمان ويعجل بالكسر. وتكبير نصف قطر الشطفة (Generous Fillet) يخفض $K_t$ ويرفع العمر الافتراضي.</p>
+    </div>
+    <div class="glass-card p-5 rounded-2xl border border-slate-700 space-y-2">
+      <div class="flex items-center justify-between border-b border-slate-700 pb-2">
+        <b class="text-amber-300 font-en">4. Effect of Mean Stress ($\sigma_m$)</b>
+        <span class="highlight-badge px-2 py-0.5 rounded text-xs">تأثير الإجهاد المتوسط (شد مقابل ضغط)</span>
+      </div>
+      <p class="font-en text-slate-200 text-left" dir="ltr">
+        • <b>Tensile Mean Stress ($\sigma_m > 0$):</b>
+        <br>&rarr; Physically pulls micro-cracks open and accelerates propagation &rArr; <b>DECREASES fatigue life</b>.
+        <br>• <b>Compressive Mean Stress ($\sigma_m < 0$):</b>
+        <br>&rarr; Mechanically holds micro-cracks closed and retards propagation &rArr; <b>INCREASES fatigue life</b>.
+        <br>• <b>Shot Peening & Cold Working:</b> Induces residual compressive surface stress &rArr; <b>extends fatigue life</b>.
+      </p>
+      <p class="text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-cyan-300">الشرح بالعربي:</b> إجهاد الشد المتوسط يفتح الشروخ ويسرع نموها فيقلل عمر الكلال. بينما إجهاد الضغط المتوسط يغلق الشروخ ميكانيكياً ويمنع انتشارها فيرفع عمر الكلال (وهذا مبدأ تقوية السطح بالقذف بالكرات Shot Peening).</p>
+    </div>
+    <div class="glass-card p-5 rounded-2xl border border-slate-700 space-y-2">
+      <div class="flex items-center justify-between border-b border-slate-700 pb-2">
+        <b class="text-amber-300 font-en">5. Surface Finish vs. Material Strength</b>
+        <span class="highlight-badge px-2 py-0.5 rounded text-xs">تشطيب السطح مقابل متانة المادة</span>
+      </div>
+      <p class="font-en text-slate-200 text-left" dir="ltr">
+        • <b>Surface Ranking (Highest to Lowest $k_a$):</b>
+        <br>Mirror Polished ($k_a \approx 1.0$) &gt; Ground &gt; Machined / Cold-drawn &gt; Hot-rolled &gt; As-forged.
+        <br>• <b>Sensitivity Rule:</b> Higher-strength steels ($S_{ut} \uparrow$) are <b>MORE sensitive</b> to surface roughness ($k_a$ drops much faster as $S_{ut}$ increases).
+      </p>
+      <p class="text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-cyan-300">الشرح بالعربي:</b> السطح المصقول كالمرآة يعطي أعلى معامل سطح ($k_a \approx 1.0$). والفولاذ عالي المتانة يكون أكثر حساسية لخشونة السطح، حيث يهبط معامله $k_a$ بانحدار أسرع مقارنة بالفولاذ اللين.</p>
+    </div>
+    <div class="glass-card p-5 rounded-2xl border border-slate-700 space-y-2">
+      <div class="flex items-center justify-between border-b border-slate-700 pb-2">
+        <b class="text-amber-300 font-en">6. Shaft Deflection vs. Material Strength</b>
+        <span class="highlight-badge px-2 py-0.5 rounded text-xs">انحراف العمود مقابل متانة المادة (القاعدة الذهبية)</span>
+      </div>
+      <p class="font-en text-slate-200 text-left" dir="ltr">
+        • <b>Deflection and Rigidity:</b> Controlled purely by <b>GEOMETRY (diameter $d$ and length $L$), NOT material</b>.
+        <br>&rarr; Reason: All carbon and alloy steels share essentially the same Young's modulus ($E \approx 207\text{ GPa}$).
+        <br>&rarr; Replacing standard carbon steel with expensive alloy steel <b>DOES NOT reduce shaft deflection</b>!
+        <br>• <b>Strength:</b> Controlled by <b>MATERIAL PROPERTIES ($S_y, S_{ut}$)</b>.
+      </p>
+      <p class="text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-cyan-300">الشرح بالعربي:</b> الانحراف والصلادة يتحكم فيهما قطر العمود وطوله فقط وليس نوع الصلب، لأن معامل المرونة $E$ ثابت لجميع أنواع الصلب. استبدال الصلب العادي بصلب سبائكي باهظ لا يقلل الانحراف إطلاقاً، بل يزيد المتانة فقط.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UNIT 1 ================= -->
+<section id="sec-u1" class="tab-content hidden space-y-6">
+  <div class="glass-card p-6 rounded-2xl border-r-4 border-teal-500 shadow-xl">
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-teal-500/20 text-teal-400 rounded-xl"><i class="fa-solid fa-compass text-2xl"></i></div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-teal-300">Unit 1 — Introduction, Design Process, Ethics & Standards</h2>
+        <p class="text-xs sm:text-sm text-slate-400">التفريغ الكامل لشرائح ومحاضرة المقدمة · ميثاق الشرف الأخلاقي · مراحل التصميم الست · المعايير والرموز · المسؤولية الصارمة</p>
+      </div>
+    </div>
+  </div>
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 space-y-5">
+    <h3 class="text-lg font-bold text-cyan-300 flex items-center gap-2 border-b border-slate-700 pb-3"><i class="fa-solid fa-book-bookmark"></i> السرد الأكاديمي الشامل لمحاضرة الوحدة الأولى (Bilingual Narrative)</h3>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+      <div class="bg-slate-800/80 px-4 py-2 text-xs font-bold text-teal-400 flex justify-between"><span>1.1 Definition & Objective of Engineering Design</span><span>تعريف وهدف التصميم الهندسي</span></div>
+      <div class="p-4 space-y-2">
+        <p class="font-en text-sm text-slate-200 text-left" dir="ltr"><b>Engineering Design</b> is either to formulate a plan for the satisfaction of a specified need or to solve a specific problem.<br><b>The primary objective of Machine Design is SYNTHESIS (creation), not analysis.</b> Analysis is merely an engineering tool that serves as a means toward an end. Synthesis involves the creative conception of mechanisms and optimization with respect to performance, reliability, and cost.</p>
+        <p class="text-xs sm:text-sm text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-amber-300">الشرح بالعربي:</b> التصميم الهندسي هو صياغة خطة لتلبية حاجة محددة أو حل مشكلة. الهدف الجوهري هو <b>التوليف والتخليق والإبداع (Synthesis / Creation)</b>، بينما <b>التحليل (Analysis)</b> مجرد أداة حسابية مساعدة للتحقق والتقييم.</p>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+      <div class="bg-slate-800/80 px-4 py-2 text-xs font-bold text-teal-400 flex justify-between"><span>1.2 The Three Tasks of a Machine Design Engineer</span><span>المهام الفنية الثلاث لمهندس التصميم</span></div>
+      <div class="p-4 space-y-2">
+        <p class="font-en text-sm text-slate-200 text-left" dir="ltr">1. <b>Selects proper materials</b> and best suited geometric shapes.<br>2. <b>Calculates dimensions</b> based on external loads and material strength.<br>3. <b>Specifies the manufacturing process</b> to fabricate the element or entire machine.</p>
+        <p class="text-xs sm:text-sm text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-amber-300">الشرح بالعربي:</b> مهام مهندس التصميم الثلاث: اختيار المواد والأشكال، حساب الأبعاد، وتحديد طريقة التصنيع. أي أنشطة تجارية (مثل تحديد سعر البيع بالتجزئة أو الحملات الإعلانية والتسويق) تقع خارج نطاقه.</p>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+      <div class="bg-slate-800/80 px-4 py-2 text-xs font-bold text-teal-400 flex justify-between"><span>1.3 The 6 Progressive Design Phases & Tools</span><span>مراحل التصميم الست ومنهجيات التقييم</span></div>
+      <div class="p-4 space-y-2">
+        <p class="font-en text-sm text-slate-200 text-left" dir="ltr">• <b>Six Phases Sequence:</b> Needs analysis &rarr; Conceptual design &rarr; Embodiment (Intermediate) &rarr; Detailed production design &rarr; Testing/Validation &rarr; Production/Improvement.<br>• <b>Conceptual Design:</b> The creative core where multiple schemes are developed and coarsely evaluated. Has the greatest long-term influence on product cost (&gt;70%). Tools: <i>Brainstorming, Morphological Chart, Pugh Concept Selection Matrix, Concept Scoring (weighted decision matrices)</i>.<br>• <b>Detailed Design:</b> Creates complete technical drawings, bills of materials (BOM), and precise tolerances.<br>• <b>DFX Methodologies:</b> Design for Manufacturing (DFM), Assembly (DFA), Reliability (DFR), Safety (DFS), Environment (DFE), Cost (DFC).</p>
+        <p class="text-xs sm:text-sm text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-amber-300">الشرح بالعربي:</b> يبدأ الترتيب بتحليل الاحتياجات وينتهي بالتحسين المستمر. التصميم المفاهيمي هو النواة الإبداعية ويحسم أكثر من 70% من التكلفة. مصفوفة Pugh لغربلة الخيارات، والمخطط المورفولوجي لربط الوظائف بالحلول.</p>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+      <div class="bg-slate-800/80 px-4 py-2 text-xs font-bold text-teal-400 flex justify-between"><span>1.4 Standards vs Codes, Ethics & Strict Liability</span><span>المعايير والرموز، ميثاق الشرف الأخلاقي والمسؤولية الصارمة</span></div>
+      <div class="p-4 space-y-2">
+        <p class="font-en text-sm text-slate-200 text-left" dir="ltr">&bull; <b>Code of Ethics:</b> Engineers must <b>hold paramount the safety, health, and welfare of the public</b>. Perform services <b>only in the areas of their competence</b>.<br>&bull; <b>Standard:</b> A set of technical definitions and guidelines written by experts — considered <b>voluntary</b> (e.g., ASME B1 screw threads, B18 fasteners, B46 surface qualities, Y14 engineering drawing).<br>&bull; <b>Code:</b> A set of standards adopted by governmental bodies or incorporated into a contract — has the <b>force of law</b> (e.g., ASME Boiler & Pressure Vessel Code - BPVC).<br>&bull; <b>Strict Liability:</b> The manufacturer is legally responsible for injury/damage caused by a product defect — <b>negligence does not have to be proven</b> by the plaintiff.<br>&bull; <b>5 Sources of Uncertainty:</b> (1) Material strength scatter, (2) Manufacturing dimensional variations, (3) Mathematical/analytical approximations, (4) Inexact knowledge of loads/history, (5) Corrosion/wear in service.</p>
+        <p class="text-xs sm:text-sm text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-amber-300">الشرح بالعربي:</b> حماية الجمهور هي الأولوية القصوى الحاكمة. المعيار طوعي واختياري، والرمز إلزامي بقوة القانون. المسؤولية الصارمة تعاقب الصانع عن أي عيب دون حاجة لإثبات الإهمال.</p>
+      </div>
+    </div>
+  </div>
+  <div class="glass-card p-5 rounded-2xl border border-teal-500/30 bg-teal-950/20 space-y-2">
+    <h4 class="text-sm font-bold text-teal-300 flex items-center gap-2"><i class="fa-solid fa-video text-teal-400"></i> تفريغ ملاحظات ونقاط تركيز الدكتور من فيديوهات الوحدة الأولى:</h4>
+    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside leading-relaxed">
+      <li>يركز الدكتور على أن التصميم <b>إبداع وابتكار (Synthesis)</b> وحل مشاكل واقعية وليس مجرد تحليل أرقام.</li>
+      <li>في أسئلة الأخلاقيات: أي سؤال يحتوي على <i>overriding responsibility</i> أو <i>paramount</i> فالإجابة فوراً: <b>سلامة وصحة ورفاهية الجمهور</b>.</li>
+      <li>الرمز (Code) ملزم قانونياً (Force of law)، بينما المعيار (Standard) اختياري طوعي (Voluntary).</li>
+      <li>معامل الأمان وظيفته الأساسية تعويض <b>عدم اليقين (Uncertainty)</b> وعواقب الانهيار.</li>
+    </ul>
+  </div>
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 shadow-xl">
+    <div class="flex items-center justify-between mb-4 border-b border-slate-700 pb-3 flex-wrap gap-2">
+      <h3 class="text-lg font-bold text-indigo-300 flex items-center gap-2"><i class="fa-solid fa-pen-to-square"></i> بنك أسئلة تدريب الوحدة الأولى (15 سؤالاً)</h3>
+      <div id="score-u1" class="text-xs font-bold text-slate-400"></div>
+    </div>
+    <div id="quiz-container-u1" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- ================= UNIT 2 ================= -->
+<section id="sec-u2" class="tab-content hidden space-y-6">
+  <div class="glass-card p-6 rounded-2xl border-r-4 border-cyan-500 shadow-xl">
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-cyan-500/20 text-cyan-400 rounded-xl"><i class="fa-solid fa-arrows-split-up-and-left text-2xl"></i></div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-cyan-300">Unit 2 — Stresses, Strains & Static Failure Theories</h2>
+        <p class="text-xs sm:text-sm text-slate-400">اختبار الشد · ثوابت المرونة وعلاقاتها · دائرة مور والتحويلات · تركيز الإجهاد الاستاتيكي · الأوعية الرقيقة والكمرات · نظريات الانهيار الاستاتيكي</p>
+      </div>
+    </div>
+  </div>
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 space-y-5">
+    <h3 class="text-lg font-bold text-cyan-300 flex items-center gap-2 border-b border-slate-700 pb-3"><i class="fa-solid fa-book-bookmark"></i> السرد الأكاديمي الشامل لمحاضرة الوحدة الثانية</h3>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+      <div class="bg-slate-800/80 px-4 py-2 text-xs font-bold text-cyan-400 flex justify-between"><span>2.1 Tensile Test, Elastic Constants & 3D Hooke's Law</span><span>اختبار الشد، ثوابت المرونة وقانون هوك ثلاثي الأبعاد</span></div>
+      <div class="p-4 space-y-2">
+        <p class="font-en text-sm text-slate-200 text-left" dir="ltr">&bull; <b>Engineering Stress & Strain:</b> $\sigma = P / A_0$ (original area), $\epsilon = (l - l_0)/l_0$.<br>&bull; <b>Yield Strength ($S_y$):</b> Defined at <b>0.2% (0.002) permanent plastic offset</b> of original gauge length.<br>&bull; <b>Elastic Moduli Relation:</b> $E = 2G(1+\nu) \iff G = \frac{E}{2(1+\nu)}$ (where $\nu$ is Poisson's ratio).<br>&bull; <b>3D Elastic Strain Equations:</b> $\epsilon_x = \frac{1}{E}[\sigma_x - \nu(\sigma_y+\sigma_z)]$, $\epsilon_y = \frac{1}{E}[\sigma_y - \nu(\sigma_x+\sigma_z)]$, $\epsilon_z = \frac{1}{E}[\sigma_z - \nu(\sigma_x+\sigma_y)]$.<br>&bull; <b>Torsion:</b> $\tau = Tr/J$, where $J = \pi D^4 / 32$. Modulus of rupture $S_{su} = T_u r / J$.<br>&bull; <b>Ductile vs Brittle Compression:</b> Ductile materials have $S_{uc} \approx S_{ut}$; Brittle materials have $S_{uc} > S_{ut}$.</p>
+        <p class="text-xs sm:text-sm text-slate-300 pt-2 border-t border-slate-800 leading-relaxed"><b class="text-amber-300">الشرح بالعربي:</b> إجهاد الخضوع يُعرّف عند إزاحة لدنة 0.2%. معامل المرونة $E$ يرتبط بمعامل القص $G$ ونسبة بواسون $\nu$ بالعلاقة الثابتة $G = E / [2(1+\nu)]$. إجهاد القص في الليّ ينعدم بالمركز ويصل ذروته عند السطح الخارجي.</p>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+      <div class="bg-slate-800/80 px-4 py-2 text-xs font-bold text-cyan-400 flex justify-between"><span>2.2 Plane Stress, Mohr's Circle & Example 3-4</span><span>الإجهاد المستوي، دائرة مور ومثال المحاضرة المحلول (Ex 3-4)</span></div>
+      <div class="p-4 space-y-2">
+        <p class="font-en text-sm text-slate-200 text-left" dir="ltr">&bull; <b>Plane Stress:</b> $\sigma_z = \tau_{xz} = \tau_{yz} = 0$. Cross shears are equal: $\tau_{xy} = \tau_{yx}$.<br>&bull; <b>Mohr's Circle:</b> Center $C = \left( \frac{\sigma_x+\sigma_y}{2}, 0 \right)$, Radius $R = \sqrt{\left(\frac{\sigma_x-\sigma_y}{2}\right)^2 + \tau_{xy}^2}$.<br>&bull; <b>Principal Planes:</b> Carry ZERO shear stress ($\tau = 0$). Extreme shear occurs at $\pm 45^\circ$.<br>&bull; <b>Correct $\tau_{\max}$ Evaluation:</b> Always order $\sigma_1 \ge \sigma_2 \ge \sigma_3$ (in plane stress $\sigma_3 = 0$), then $\tau_{\max} = \frac{\sigma_1 - \sigma_3}{2}$.</p>
+        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-300 space-y-1">
+          <b class="text-cyan-300">حل مثال المحاضرة (Example 3-4 from Slides):</b>
+          <br>معطى: $\sigma_x = 80\text{ MPa}, \sigma_y = 0, \tau_{xy} = 50\text{ MPa (cw)}$.
+          <br>المركز $C = (40, 0)\text{ MPa}$ ، نصف القطر $R = \sqrt{(40)^2 + (50)^2} = 64.0\text{ MPa}$.
+          <br>الإجهادات الرئيسية: $\sigma_1 = 40 + 64 = \mathbf{104\text{ MPa}}$, $\sigma_2 = 40 - 64 = \mathbf{-24\text{ MPa}}$, وزاوية الاتجاه $2\phi_p = \tan^{-1}(50/40) = \mathbf{51.3^\circ}$.
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+      <div class="bg-slate-800/80 px-4 py-2 text-xs font-bold text-cyan-400 flex justify-between"><span>2.3 Static Stress Concentration ($K_t$) & Cylinders/Beams</span><span>تركيز الإجهاد الاستاتيكي والأوعية الرقيقة والكمرات</span></div>
+      <div class="p-4 space-y-2">
+        <p class="font-en text-sm text-slate-200 text-left" dir="ltr">&bull; <b>Static $K_t$ for Ductile Materials:</b> <b>COMMONLY IGNORED</b> under static loading because localized yielding and cold working redistribute the stress safely.<br>&bull; <b>Static $K_t$ for Brittle Materials:</b> Applied directly $\implies \sigma_{\max} = K_t \sigma_0$.<br>&bull; <b>Thin-Walled Cylinders ($t \le r_i/10$):</b> Tangential (hoop) stress $\sigma_t = \frac{p r_i}{t} = \frac{p d_i}{2t}$ (double the longitudinal stress $\sigma_l = \frac{p r_i}{2t}$).<br>&bull; <b>Beams in Bending:</b> $\sigma = \frac{My}{I} = \frac{M}{Z}$, Section modulus $Z = I/c$. Beam equation: $\frac{M}{I} = \frac{\sigma}{c} = \frac{E}{R}$.</p>
+        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-300 space-y-1">
+          <b class="text-cyan-300">حل مسألة الأسطوانة والكمرة (Slide Exercises):</b>
+          <br>1. أسطوانة ألومنيوم ($OD = 200\text{ mm}, t = 6\text{ mm}, \sigma_{\text{all}} = 82\text{ MPa}$): $r_i = 100 - 6 = 94\text{ mm} \implies p = \frac{82 \times 6}{94} = \mathbf{5.23\text{ MPa}}$.
+          <br>2. كمرة كابولية بشكل I-section تحت حمل $1000\text{ N}$ بطول $400\text{ mm}$: $M = 400\text{ kN}\cdot\text{mm}, Z = 18.667 t^3 \implies \frac{400\times 1000}{18.667 t^3} \le 100 \implies \mathbf{t = 5.98 \approx 6\text{ mm}}$.
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+      <div class="bg-slate-800/80 px-4 py-2 text-xs font-bold text-cyan-400 flex justify-between"><span>2.4 Static Failure Theories for Ductile Materials</span><span>نظريات الانهيار الاستاتيكي للمواد المطيلة</span></div>
+      <div class="p-4 space-y-2">
+        <p class="font-en text-sm text-slate-200 text-left" dir="ltr">&bull; <b>Maximum Normal Stress Theory:</b> <b>NOT SAFE for ductile materials</b> (fails experimentally in the 4th quadrant).<br>&bull; <b>Maximum Shear Stress (MSS / Tresca):</b> Yielding begins when $\tau_{\max} \ge S_y/2$. Conservative in all quadrants and widely used in industry codes.<br>&bull; <b>Distortion Energy (DE / von Mises):</b> Yielding begins when von Mises stress $\sigma' \ge S_y$. Best fit and most accurate for ductile metals:
+        $$\sigma' = \sqrt{\sigma_A^2 - \sigma_A \sigma_B + \sigma_B^2} = \sqrt{\sigma_x^2 - \sigma_x\sigma_y + \sigma_y^2 + 3\tau_{xy}^2}$$</p>
+      </div>
+    </div>
+  </div>
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 shadow-xl">
+    <div class="flex items-center justify-between mb-4 border-b border-slate-700 pb-3 flex-wrap gap-2">
+      <h3 class="text-lg font-bold text-indigo-300 flex items-center gap-2"><i class="fa-solid fa-pen-to-square"></i> بنك أسئلة تدريب الوحدة الثانية (15 سؤالاً)</h3>
+      <div id="score-u2" class="text-xs font-bold text-slate-400"></div>
+    </div>
+    <div id="quiz-container-u2" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- ================= UNIT 3 ================= -->
+<section id="sec-u3" class="tab-content hidden space-y-6">
+  <div class="glass-card p-6 rounded-2xl border-r-4 border-amber-500 shadow-xl">
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-amber-500/20 text-amber-400 rounded-xl"><i class="fa-solid fa-shield-halved text-2xl"></i></div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-amber-300">Unit 3 — Fatigue Failure Resulting from Variable Loading ⭐</h2>
+        <p class="text-xs sm:text-sm text-slate-400">تفريغ كامل لمحاضرة وفيديوهات الكلال: المراحل الثلاث، منحنى S-N، معاملات مارين، حساسية الشق، الحديد الزهر، الإجهاد المتوسط، ومعايير الانهيار الأربعة</p>
+      </div>
+    </div>
+  </div>
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 space-y-6">
+    <h3 class="text-lg font-bold text-amber-300 flex items-center gap-2 border-b border-slate-700 pb-3"><i class="fa-solid fa-code-compare"></i> جدول المقارنات والعلاقات الهندسية الشاملة للوحدة الثالثة</h3>
+    <div class="bg-slate-900/90 rounded-xl border border-amber-500/40 p-4 space-y-2">
+      <h4 class="text-xs font-bold text-amber-300 flex items-center gap-2"><i class="fa-solid fa-video text-amber-400"></i> تفريغ مباشر وشامل لشرح وفيديوهات د. محمد عثمان في الكلال:</h4>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        • <b>مثال العمود الدوار تحت انحناء (Rotating Shaft under Bending):</b> أي ليفة على السطح تكون في النصف العلوي تحت ضغط، وبعد نصف دورة (180 درجة) تصبح تحت شد كامل. وبالتالي يتكرر هذا الإجهاد المتناوب في كل لفة ($\sigma_a = \sigma, \sigma_m = 0$).<br>
+        • <b>تفسير كسر الكلال:</b> لا ينكسر الجزء لأن الإجهاد تجاوز المتانة، بل يحدث انهيار مباغت وبلا تحذير تحت إجهادات أقل بكثير من إجهاد الخضوع ($\sigma \ll S_y$).<br>
+        • <b>ظهور علامات الشاطئ (Beach Marks):</b> في المرحلة الثانية (Stage II)، يفتح الشق الماكروي ويغلق مع كل دورة تحميل، مما يترك خطوطاً حلقية منتظمة تشبه أمواج الشاطئ حتى يعجز المقطع المتبقي فيحدث كسر سريع (Stage III).<br>
+        • <b>الفرق بين عينة المعمل والماكينة الحقيقية:</b> عينة المعمل ($S_e'$) مصقولة كالمرآة وصغيرة الحجم وبدرجة حرارة الغرفة، بينما أجزاء الماكينة خشنة وكبيرة وتتعرض لبيئة قاسية، ولذلك طوّر مارين معادلة المعاملات الستة ($k_a \cdot k_b \cdot k_c \cdot k_d \cdot k_e \cdot k_f$).
+      </p>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3">
+      <h4 class="text-sm font-bold text-cyan-300 flex items-center gap-2"><span class="highlight-badge px-2 py-0.5 rounded text-xs">مقارنة 1</span> الانهيار الاستاتيكي مقابل انهيار الكلال (Static vs. Fatigue Failure)</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-slate-300 border-collapse">
+          <thead><tr class="bg-slate-800 text-teal-300"><th class="p-2 border border-slate-700 text-right">وجه المقارنة</th><th class="p-2 border border-slate-700 text-right">الانهيار الاستاتيكي (Static Failure)</th><th class="p-2 border border-slate-700 text-right">انهيار الكلال (Fatigue Failure)</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">طبيعة الحمل (Loading)</td><td class="p-2 border border-slate-800">حمل ساكن وثابت أو يتزايد تدريجياً مرة واحدة.</td><td class="p-2 border border-slate-800 font-bold text-teal-200">أحمال متذبذبة ومتكررة مع الزمن (Cyclic / Fluctuating).</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">مستوى الإجهاد (Stress Level)</td><td class="p-2 border border-slate-800">يحدث عند تجاوز إجهاد الخضوع $S_y$ أو المتانة القصوى $S_{ut}$.</td><td class="p-2 border border-slate-800 font-bold text-rose-300">يحدث عند إجهادات أقل بكثير من إجهاد الخضوع ($\sigma \ll S_y$).</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">المظهر والإنذار (Warning / Necking)</td><td class="p-2 border border-slate-800">يسبقه تشوه لدن كبير ومرئي (Necking / Yielding).</td><td class="p-2 border border-slate-800 font-bold text-amber-200">كسر مفاجئ وكارثي يشبه كسر المواد الهشة بدون إنذار مسبق.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">علامات سطح الكسر</td><td class="p-2 border border-slate-800">شكل الكأس والمخروط (Cup & Cone).</td><td class="p-2 border border-slate-800 font-mono-code text-cyan-300">علامات الشاطئ (Beach Marks / Striations) في منطقة الانتشار.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3">
+      <h4 class="text-sm font-bold text-cyan-300 flex items-center gap-2"><span class="highlight-badge px-2 py-0.5 rounded text-xs">مقارنة 2</span> المعادن الحديدية (الصلب) مقابل المعادن غير الحديدية في منحنى S-N</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-slate-300 border-collapse">
+          <thead><tr class="bg-slate-800 text-teal-300"><th class="p-2 border border-slate-700 text-right">الخاصية</th><th class="p-2 border border-slate-700 text-right">الصلب والمعادن الحديدية (Steels / Ferrous)</th><th class="p-2 border border-slate-700 text-right">المعادن غير الحديدية (Al, Cu, Brass, Zn)</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">حد التحمل (Endurance Limit)</td><td class="p-2 border border-slate-800 text-emerald-300 font-bold">يوجد حد تحمل حقيقي ثابت ($S_e'$). يظهر منحنى أفقي (Knee).</td><td class="p-2 border border-slate-800 text-rose-300 font-bold">لا يوجد حد تحمل حقيقي (NO true endurance limit).</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">موقع الركبة (Knee Location)</td><td class="p-2 border border-slate-800">تحدث الركبة عند حوالي مليون دورة ($10^6\text{ cycles}$).</td><td class="p-2 border border-slate-800">يستمر المنحنى بالانحدار دون أن يستقر أفقياً.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">تقدير حد التحمل المعملي</td><td class="p-2 border border-slate-800 font-mono text-cyan-300">$S_e' = 0.5 S_{ut}$ (لـ $S_{ut} \le 1400$ MPa) أو 700 MPa للأعلى.</td><td class="p-2 border border-slate-800">تُحدد متانة الكلال عند عدد دورات معين مثل $5 \times 10^8$ دورة.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3">
+      <h4 class="text-sm font-bold text-cyan-300 flex items-center gap-2"><span class="highlight-badge px-2 py-0.5 rounded text-xs">قوانين ومسائل</span> معاملات مارين وحل مسألة المحاضرة (Example 6-4)</h4>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        • <b>معامل الحجم ($k_b$):</b> في الانحناء للعمود الدوار $k_b = (d/7.62)^{-0.107}$. للعمود الدائري غير الدوار القطر المكافئ $d_e = 0.370 d$. للمستطيل $d_e = 0.808 \sqrt{hb}$. في التحميل المحوري $k_b = 1.0$ دائماً.<br>
+        • <b>معامل نوع التحميل ($k_c$):</b> الانحناء = 1.0، المحوري = 0.85، الليّ والقص = 0.59.
+      </p>
+      <div class="bg-slate-950 p-3 rounded-lg border border-teal-500/30 text-xs text-slate-300 space-y-1">
+        <b class="text-teal-300">حل مسألة المحاضرة (Example 6-4 from Slides):</b>
+        <br>عمود صلب قطره $d = 32\text{ mm}$ تحت انحناء، $S_{ut} = 690\text{ MPa}$:
+        <br>(a) في حالة الدوران: $k_b = (32 / 7.62)^{-0.107} = \mathbf{0.858}$.
+        <br>(b) في حالة عدم الدوران: $d_e = 0.37 \times 32 = 11.84\text{ mm} \implies k_b = (11.84 / 7.62)^{-0.107} = \mathbf{0.954}$.
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3">
+      <h4 class="text-sm font-bold text-cyan-300 flex items-center gap-2"><span class="highlight-badge px-2 py-0.5 rounded text-xs">معايير الانهيار</span> مقارنة معايير الانهيار في الكلال تحت إجهاد متذبذب (Fatigue Criteria)</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-slate-300 border-collapse">
+          <thead><tr class="bg-slate-800 text-teal-300"><th class="p-2 border border-slate-700 text-right">المعيار</th><th class="p-2 border border-slate-700 text-right">المعادلة</th><th class="p-2 border border-slate-700 text-right">الخصائص واستخدام الامتحان</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">سودربرج (Soderberg)</td><td class="p-2 font-mono text-cyan-300 border border-slate-800">$\frac{\sigma_a}{S_e} + \frac{\sigma_m}{S_y} = \frac{1}{n}$</td><td class="p-2 border border-slate-800"><b>الأكثر تحفظاً (Most conservative)</b>؛ يربط الإجهاد المتوسط بإجهاد الخضوع $S_y$ ويمنع أي تشوه لدن.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">جودمان المعدل (Goodman)</td><td class="p-2 font-mono text-cyan-300 border border-slate-800">$\frac{\sigma_a}{S_e} + \frac{\sigma_m}{S_{ut}} = \frac{1}{n}$</td><td class="p-2 border border-slate-800"><b>المعيار الصناعي القياسي (Industry standard)</b>؛ يربط الإجهاد المتوسط بالمتانة القصوى $S_{ut}$.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">جيربر (Gerber Parabola)</td><td class="p-2 font-mono text-cyan-300 border border-slate-800">$\frac{n\sigma_a}{S_e} + \left(\frac{n\sigma_m}{S_{ut}}\right)^2 = 1$</td><td class="p-2 border border-slate-800">قطع مكافئ؛ يمثل <b>أفضل تطابق إحصائي (Best fit)</b> لبيانات التجارب.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">بيضاوي ASME (ASME Elliptic)</td><td class="p-2 font-mono text-cyan-300 border border-slate-800">$\left(\frac{n\sigma_a}{S_e}\right)^2 + \left(\frac{n\sigma_m}{S_y}\right)^2 = 1$</td><td class="p-2 border border-slate-800">يجمع بين أمان الكلال ومنع الخضوع بشكل بيضاوي متصل.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-300">
+        <b class="text-amber-300">تمرين المحاضرة المحلول لسودربرج:</b> $\sigma_{\max} = 200, \sigma_{\min} = -100, S_{ut} = 700, S_y = 400, S_e = 200\text{ MPa}$<br>
+        $\sigma_a = 150, \sigma_m = 50\text{ MPa} \implies \frac{1}{n} = \frac{150}{200} + \frac{50}{400} = 0.875 \implies \mathbf{n = 1.14}$.
+      </div>
+    </div>
+  </div>
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 shadow-xl">
+    <div class="flex items-center justify-between mb-4 border-b border-slate-700 pb-3 flex-wrap gap-2">
+      <h3 class="text-lg font-bold text-indigo-300 flex items-center gap-2"><i class="fa-solid fa-pen-to-square"></i> بنك أسئلة تدريب الوحدة الثالثة الموسع (25 سؤالاً)</h3>
+      <div id="score-u3" class="text-xs font-bold text-slate-400"></div>
+    </div>
+    <div id="quiz-container-u3" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- ================= UNIT 4 ================= -->
+<section id="sec-u4" class="tab-content hidden space-y-6">
+  <div class="glass-card p-6 rounded-2xl border-r-4 border-indigo-500 shadow-xl">
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-indigo-500/20 text-indigo-400 rounded-xl"><i class="fa-solid fa-gears text-2xl"></i></div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-indigo-300">Unit 4 — Design of Shafts: تفريغ شامل وحلول كافة التمارين التسعة ⭐</h2>
+        <p class="text-xs sm:text-sm text-slate-400">تفريغ كامل للمحاضرة والفيديوهات: أنواع الأعمدة، القاعدة الذهبية، الريشة كأضعف حلقة، حلقات التثبيت، تبسيط العمود الدوار، وحلول التمارين 1 إلى 9</p>
+      </div>
+    </div>
+  </div>
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 space-y-6">
+    <h3 class="text-lg font-bold text-cyan-300 flex items-center gap-2 border-b border-slate-700 pb-3"><i class="fa-solid fa-code-compare"></i> تفريغ محاضرة وفيديوهات الأعمدة والقاعدة الذهبية</h3>
+    <div class="bg-slate-900/90 rounded-xl border border-indigo-500/40 p-4 space-y-2">
+      <h4 class="text-xs font-bold text-indigo-300 flex items-center gap-2"><i class="fa-solid fa-video text-indigo-400"></i> تفريغ مباشر لنقاط وتركيزات د. محمد عثمان في الأعمدة:</h4>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        • <b>القاعدة الذهبية (Deflection vs Strength):</b> الانحراف والصلادة ومستوى الإجهاد يتحكم فيها <b>الشكل الهندسي (Geometry)</b> وليس المادة، لأن معامل المرونة $E \approx 207\text{ GPa}$ ثابت لجميع أنواع الصلب. بينما <b>المتانة (Strength)</b> هي الوحيدة التي تتحكم فيها خواص المادة.<br>
+        • <b>الريشة كـ Weakest Link:</b> تُصمم الريشة (Key) عمداً لتكون أضعف حلقة في المنظومة، بحيث تنقص بالقص أولاً عند حدوث حمل زائد مفاجئ، فتضحي بنفسها لتحمي العمود والموتور والتروس الباهظة.<br>
+        • <b>التبسيط العبقري للعمود الدوار:</b> في العمود الدوار تحت عزم انحناء وعزم ليّ ثابتين، يكون إجهاد الانحناء متناوباً كلياً ($M_m = 0$) وعزم الليّ ثابتاً ($T_a = 0$) مما يبسط معادلة جودمان إلى: $d^3 = \frac{16n}{\pi} \left[ \frac{2 K_f M_a}{S_e} + \frac{\sqrt{3} K_{fs} T_m}{S_{ut}} \right]$.<br>
+        • <b>حلقات التثبيت (Retaining Rings):</b> تستخدم للأحمال المحورية الخفيفة فقط لأن مجراها يرفع تركيز الإجهاد إلى $K_t \approx 5.0$.
+      </p>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3">
+      <h4 class="text-sm font-bold text-cyan-300 flex items-center gap-2"><span class="highlight-badge px-2 py-0.5 rounded text-xs">مقارنة 1</span> أنواع الأعمدة الميكانيكية ووظائفها (Types of Mechanical Shafts)</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-slate-300 border-collapse">
+          <thead><tr class="bg-slate-800 text-teal-300"><th class="p-2 border border-slate-700 text-right">نوع العمود</th><th class="p-2 border border-slate-700 text-right">التعريف الهندسي والوظيفة</th><th class="p-2 border border-slate-700 text-right">الخصائص الميكانيكية</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">عمود الخط (Line Shaft)</td><td class="p-2 border border-slate-800">عمود طويل ينقل القدرة من محرك رئيسي إلى عدة ماكينات في المصنع.</td><td class="p-2 border border-slate-800">يتعرض لعزوم انحناء وليّ موزعة ومستمرة.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">المغزل (Spindle)</td><td class="p-2 border border-slate-800">عمود قصير عالي الدقة، مثل عمود ظرف المخرطة (Headstock spindle).</td><td class="p-2 border border-slate-800">انحرافه ضئيل جداً للحفاظ على دقة التشغيل.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">العمود القصير المتكامل (Stub Shaft)</td><td class="p-2 border border-slate-800">عمود قصير مدمج كجزء لا يتجزأ من المحرك الرئيسي (Engine / Prime Mover).</td><td class="p-2 border border-slate-800">يبرز للخارج لتركيب الطارة أو القارنة.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">العمود الوسيط (Counter Shaft)</td><td class="p-2 border border-slate-800">عمود وسيط يربط المحرك الرئيسي بعمود الخط أو بماكينة لتغيير السرعة أو العزم.</td><td class="p-2 border border-slate-800">يدعم تروساً وبكرات متعددة بين المساند.</td></tr>
+            <tr><td class="p-2 font-bold border border-slate-800 text-amber-300">العمود المرن (Flexible Shaft)</td><td class="p-2 border border-slate-800">ينقل الحركة بين محورين يقعان بزاوية متغيرة وليسا على استقامة واحدة.</td><td class="p-2 border border-slate-800">مخصص للقدرات والعزوم الصغيرة نسبياً.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-4">
+      <h4 class="text-sm font-bold text-amber-300 flex items-center gap-2"><i class="fa-solid fa-calculator text-amber-400"></i> الحلول النموذجية الكاملة لتمارين شيت ومحاضرة الأعمدة (Exercises 1 &rarr; 9)</h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-1">
+          <b class="text-cyan-300">Exercise 1 & 2 (Soderberg vs Goodman):</b>
+          <p class="text-slate-300 leading-relaxed">معطى: $M_a=70, T_a=45, M_m=55, T_m=35\text{ N}\cdot\text{m}$, $S_{ut}=700, S_y=560, S_e=210\text{ MPa}$, $K_f=2.2, K_{fs}=1.8, n=2.0$.<br>
+          $A = \sqrt{4(2.2\times 70)^2 + 3(1.8\times 45)^2} = 338.4\text{ N}\cdot\text{m}$<br>
+          $B = \sqrt{4(2.2\times 55)^2 + 3(1.8\times 35)^2} = 265.5\text{ N}\cdot\text{m}$<br>
+          • بسودربرج: $d^3 = \frac{16(2)}{\pi} \left[ \frac{338.4}{210\times 10^6} + \frac{265.5}{560\times 10^6} \right] \implies \mathbf{d = 27.7\text{ mm}}$.<br>
+          • بجودمان: نقسم $B$ على $S_{ut} = 700\text{ MPa} \implies \mathbf{d = 27.1\text{ mm}}$.</p>
+        </div>
+        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-1">
+          <b class="text-cyan-300">Exercise 5 & 6 (Shoulder Sizing):</b>
+          <p class="text-slate-300 leading-relaxed">صلب SAE 2340 ($S_{ut}=1226, S_y=1130\text{ MPa}$), $M_a=70, T_m=45\text{ N}\cdot\text{m}$, $n=2.5$.<br>
+          بما أن $M_m=0, T_a=0$ وبسودربرج:<br>
+          $d^3 = \frac{16(2.5)}{\pi} \left[ \frac{2(1.7)(70)}{S_e} + \frac{\sqrt{3}(1.5)(45)}{1130\times 10^6} \right] \implies \mathbf{d \approx 28\text{ mm}}$.</p>
+        </div>
+        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-1">
+          <b class="text-cyan-300">Exercise 7 (Comparison):</b>
+          <p class="text-slate-300 leading-relaxed">$M_a = 468\text{ N}\cdot\text{m}, T_m = 360\text{ N}\cdot\text{m}$.<br>
+          نلاحظ أن قطر سودربرج دائماً <b>أكبر وأكثر تحفظاً</b> من قطر جودمان لأن $S_y < S_{ut}$.</p>
+        </div>
+        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-1">
+          <b class="text-cyan-300">Exercise 8 & 9 (Power & Reliability):</b>
+          <p class="text-slate-300 leading-relaxed">• Ex 8: $P=20\text{ kW}, N=200\text{ rpm} \implies T = \frac{60\times 20000}{2\pi (200)} = 955\text{ N}\cdot\text{m}$. الحمل المركزي $900\text{ N}$ بمسافة $2.5\text{ m} \implies M_a = \frac{FL}{4} = \frac{900\times 2.5}{4} = 562.5\text{ N}\cdot\text{m}$.<br>
+          • Ex 9: الموثوقية $99\% \implies k_e = 0.814$. $M_a=142.4, T_m=124.3\text{ N}\cdot\text{m}$.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="glass-card p-6 rounded-2xl border border-slate-700 shadow-xl">
+    <div class="flex items-center justify-between mb-4 border-b border-slate-700 pb-3 flex-wrap gap-2">
+      <h3 class="text-lg font-bold text-indigo-300 flex items-center gap-2"><i class="fa-solid fa-pen-to-square"></i> بنك أسئلة تدريب الوحدة الرابعة الموسع (25 سؤالاً)</h3>
+      <div id="score-u4" class="text-xs font-bold text-slate-400"></div>
+    </div>
+    <div id="quiz-container-u4" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- ================= PAST EXAMS ================= -->
+<section id="sec-pe" class="tab-content hidden space-y-6">
+  <div class="glass-card p-6 rounded-2xl border-r-4 border-amber-500 shadow-xl">
+    <div class="flex items-center justify-between flex-wrap gap-3">
+      <div class="flex items-center gap-3">
+        <div class="p-3 bg-amber-500/20 text-amber-400 rounded-xl"><i class="fa-solid fa-box-archive text-2xl"></i></div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-amber-300">🗂️ بنك الامتحانات السابقة الكامل (82 سؤالاً حقيقياً)</h2>
+          <p class="text-xs sm:text-sm text-slate-400">الامتحان الأول (47 سؤالاً) + الامتحان الثاني (35 سؤالاً) بنصوصها الأصلية الإنجليزية مع الشرح العربي الفوري</p>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button id="btn-p1-tab" class="px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md transition" onclick="switchPastExam('p1')">الامتحان 1 (47 سؤال)</button>
+        <button id="btn-p2-tab" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-amber-300 border border-amber-500/30 transition" onclick="switchPastExam('p2')">الامتحان 2 (35 سؤال)</button>
+      </div>
+    </div>
+  </div>
+  <div id="pe1-wrapper" class="space-y-4">
+    <div class="flex items-center justify-between bg-slate-900/90 p-4 rounded-xl border border-amber-500/30 flex-wrap gap-2">
+      <span class="text-sm font-bold text-amber-300"><i class="fa-solid fa-file-lines ml-1"></i> الامتحان السابق الأول (Questions 1 &rarr; 47)</span>
+      <div id="score-pe1" class="text-xs font-bold text-slate-400"></div>
+    </div>
+    <div id="quiz-container-pe1" class="space-y-4"></div>
+  </div>
+  <div id="pe2-wrapper" class="space-y-4 hidden">
+    <div class="flex items-center justify-between bg-slate-900/90 p-4 rounded-xl border border-amber-500/30 flex-wrap gap-2">
+      <span class="text-sm font-bold text-amber-300"><i class="fa-solid fa-file-lines ml-1"></i> الامتحان السابق الثاني (Questions 10 &rarr; 44)</span>
+      <div id="score-pe2" class="text-xs font-bold text-slate-400"></div>
+    </div>
+    <div id="quiz-container-pe2" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- ================= CALCULATOR ================= -->
+<section id="sec-calc" class="tab-content hidden space-y-6">
+  <div class="glass-card p-6 rounded-2xl border-r-4 border-indigo-500 shadow-xl">
+    <div class="flex items-center gap-3">
+      <div class="p-3 bg-indigo-500/20 text-indigo-400 rounded-xl"><i class="fa-solid fa-calculator text-2xl"></i></div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-indigo-300">🧮 الحاسبة الهندسية التفاعلية لمعادلات المنهج</h2>
+        <p class="text-xs sm:text-sm text-slate-400">حساب فوري لمعادلة مارين وأقطار الأعمدة الدوارة</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="glass-card p-5 rounded-2xl border border-slate-700 space-y-3">
+      <h3 class="text-md font-bold text-teal-300 border-b border-slate-700 pb-2 flex items-center gap-2"><i class="fa-solid fa-calculator"></i> حاسبة حد التحمل المعدل (Marin $S_e$)</h3>
+      <div class="grid grid-cols-2 gap-3 text-xs">
+        <div><label class="block text-slate-400 mb-1">Sut (MPa):</label><input id="c-sut" type="number" value="700" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcMarin()"></div>
+        <div><label class="block text-slate-400 mb-1">ka (Surface):</label><input id="c-ka" type="number" step="0.01" value="0.85" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcMarin()"></div>
+        <div><label class="block text-slate-400 mb-1">kb (Size):</label><input id="c-kb" type="number" step="0.01" value="0.90" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcMarin()"></div>
+        <div><label class="block text-slate-400 mb-1">kc (Load):</label><input id="c-kc" type="number" step="0.01" value="1.0" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcMarin()"></div>
+        <div><label class="block text-slate-400 mb-1">ke (Reliability):</label><input id="c-ke" type="number" step="0.001" value="0.814" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcMarin()"></div>
+        <div><label class="block text-slate-400 mb-1">kd (Temp):</label><input id="c-kd" type="number" step="0.01" value="1.0" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcMarin()"></div>
+      </div>
+      <div class="bg-slate-950 p-3 rounded-xl border border-teal-500/30 text-center mt-3">
+        <span class="text-xs text-slate-400">الناتج: $S_e' = $ <b id="out-sep" class="text-cyan-300">350</b> MPa &nbsp;|&nbsp; <b>$S_e = $ <span id="out-se" class="text-emerald-400 text-base font-bold">218.0</span> MPa</b></span>
+      </div>
+    </div>
+    <div class="glass-card p-5 rounded-2xl border border-slate-700 space-y-3">
+      <h3 class="text-md font-bold text-cyan-300 border-b border-slate-700 pb-2 flex items-center gap-2"><i class="fa-solid fa-gears"></i> حاسبة قطر العمود الدوار (Rotating Shaft)</h3>
+      <div class="grid grid-cols-2 gap-3 text-xs">
+        <div><label class="block text-slate-400 mb-1">عزم الانحناء $M_a$ (N·m):</label><input id="c-ma" type="number" value="100" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcShaft()"></div>
+        <div><label class="block text-slate-400 mb-1">عزم الليّ الثابت $T_m$ (N·m):</label><input id="c-tm" type="number" value="120" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcShaft()"></div>
+        <div><label class="block text-slate-400 mb-1">معامل الأمان $n$:</label><input id="c-n" type="number" step="0.1" value="2.0" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcShaft()"></div>
+        <div><label class="block text-slate-400 mb-1">حد التحمل $S_e$ (MPa):</label><input id="c-se-val" type="number" value="200" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcShaft()"></div>
+        <div><label class="block text-slate-400 mb-1">المتانة $S_{ut}$ (MPa):</label><input id="c-sut-val" type="number" value="700" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcShaft()"></div>
+        <div><label class="block text-slate-400 mb-1">معامل $K_f$ و $K_{fs}$:</label><input id="c-kf-val" type="number" step="0.1" value="2.0" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-cyan-300 font-mono" oninput="calcShaft()"></div>
+      </div>
+      <div class="bg-slate-950 p-3 rounded-xl border border-cyan-500/30 text-center mt-3">
+        <span class="text-xs text-slate-400">القطر الأدنى المطلوب: <b>$d = $ <span id="out-dia" class="text-cyan-300 text-base font-bold">29.4</span> mm</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-slate-950 border-t border-slate-800 py-6 px-4 text-center text-xs text-slate-500">
+  <div class="max-w-4xl mx-auto space-y-2">
+    <p>تم إعداد وتطوير هذا المرجع الأكاديمي الشامل بناءً على تفريغ كامل لمحاضرات وشيتات وفيديوهات د. محمد عثمان — ME323 Mechanical Engineering Design</p>
+    <p class="text-slate-600">جامعة السودان للعلوم والتكنولوجيا · كلية الهندسة الميكانيكية</p>
+  </div>
+</footer>
+
+<script>
+const QUIZ_DATA = {
+u1: [
+{q:"Which statement best defines engineering design?",o:["Recording measurements of existing machines","The formulation of a plan for the satisfaction of a specified need or to solve a specific problem","Testing materials in the laboratory only","Copying previous successful products without modifications"],a:1,e:"التعريف الأكاديمي الحرفي: التصميم الهندسي هو صياغة خطة لتلبية حاجة محددة أو حل مشكلة معينة."},
+{q:"The primary objective of machine design is:",o:["Analysis of existing systems","Accurate documentation only","Synthesis (creation) of mechanisms and machines","Cost estimation"],a:2,e:"الهدف الأساسي هو التوليف والتخليق والإبداع (Synthesis / Creation)، بينما التحليل (Analysis) مجرد أداة مساعدة."},
+{q:"A 'Code' in engineering is best described as:",o:["Voluntary guidelines written by experts","A set of standards adopted by governmental bodies or incorporated into a contract, having the force of law","An internal company recommendation","A flexible guideline that designers may ignore"],a:1,e:"الرمز (Code) هو معايير اعتمدتها الدولة أو ذُكرت في عقد قانوني وتصبح ملزمة بقوة القانون (Force of Law)."},
+{q:"Which statement about engineering standards is correct?",o:["They always have the force of law","They are written by experts and are considered voluntary benchmarks","They completely replace engineering calculations","They apply only in North America"],a:1,e:"المعايير (Standards) إرشادات فنية يكتبها خبراء وهي طوعية (Voluntary)."},
+{q:"According to the legal concept of strict liability:",o:["The plaintiff must prove that the manufacturer was negligent","The manufacturer is responsible for any damage due to a product defect without the need to prove negligence","Liability expires exactly one year after manufacture","Only manufacturing errors are covered"],a:1,e:"المسؤولية الصارمة (Strict Liability) تعني أن الصانع مسؤول عن أي عيب دون حاجة لإثبات الإهمال."},
+{q:"Which of the following is NOT one of the three main tasks of a machine design engineer?",o:["Selecting proper materials and best suited shapes","Calculating dimensions based on external loads and material strength","Specifying the manufacturing process","Setting the retail market price and advertising campaign"],a:3,e:"مهام مهندس التصميم الثلاث: اختيار المواد والأشكال، حساب الأبعاد، وتحديد طريقة التصنيع فقط."},
+{q:"In the preliminary (conceptual) design phase, the designer deals with:",o:["The entire machine as a whole","Individual components with intense stress analysis","Detail drawings and tolerances only","Bill of materials (BOM) exclusively"],a:0,e:"المرحلة التمهيدية/المفاهيمية تتعامل مع الماكينة ككل وتحدد الاتجاه العام وأكثر من 70% من التكلفة."},
+{q:"Which design phase always involves intense iterations and deals with individual components?",o:["Preliminary design","Intermediate (embodiment) design","Detailed production design","Sales and marketing"],a:1,e:"المرحلة الوسيطة (Intermediate/Embodiment) تركز على المكونات وتتطلب تكراراً مستمراً (Iterations)."},
+{q:"Which design phase produces complete technical drawings, bills of materials (BOM), and precise tolerances?",o:["Conceptual design","Intermediate design","Detailed production design","Feasibility study"],a:2,e:"المرحلة التفصيلية (Detailed Design) هي التي تنتج الرسومات الكاملة والتفاوتات وقوائم المواد."},
+{q:"According to the fundamental canons of ethics, what is the overriding responsibility of an engineer?",o:["Maximizing corporate profit margins","Accelerating project release schedules","Holding paramount the safety, health, and welfare of the public","Prioritizing technological novelty"],a:2,e:"المبدأ الأول الحاكم: تقديم سلامة وصحة ورفاهية الجمهور على كل اعتبار (Hold paramount public safety)."},
+{q:"According to ethics canons, engineers shall perform services:",o:["In any field requested by their employer","Only in the areas of their competence","Only under government supervision","Free of charge for the public"],a:1,e:"من المبادئ الأخلاقية الأساسية: تقديم الخدمات الهندسية فقط في مجالات الاختصاص والكفاءة."},
+{q:"The ASME standard designated B1 is concerned with:",o:["Chains and sprockets","Engineering drawing practices","Screw threads","Surface qualities"],a:2,e:"وفق جدول ASME: معيار B1 مخصص للوالب (Screw Threads)، وB18 للمثبتات، وY14 للرسم الهندسي."},
+{q:"Which ASME standard is dedicated to Engineering Drawing and Related Documentation Practices?",o:["ASME B1","ASME B18","ASME B46","ASME Y14"],a:3,e:"معيار ASME Y14 هو المخصص لممارسات الرسم الهندسي والتوثيق."},
+{q:"Which of the following is NOT listed as a source of uncertainty in engineering design?",o:["Random variability of material strength from sample to sample","Statistical scatter in critical dimensions due to manufacturing imperfections","The universally defined mathematical value of pi","Inexact knowledge of external loads and their history"],a:2,e:"الثوابت الرياضية كالـ Pi ليست مصدر عدم يقين؛ مصادر عدم اليقين هي تشتت المواد، أبعاد التصنيع، والأحمال."},
+{q:"The primary purpose of incorporating a Factor of Safety in design is to:",o:["Make the component unnecessarily heavy","Compensate for uncertainties in loads, material properties, and analysis","Speed up the manufacturing process","Satisfy aesthetic preferences"],a:1,e:"معامل الأمان يعوض عدم اليقين في المواد، الأحمال، التصنيع، والتقريبات لمنع الفشل الكارثي."}
+],
+u2: [
+{q:"The yield strength Sy is defined at the point where the permanent plastic offset reaches:",o:["0.2% (0.002) of the original gauge length","2.0% of the original gauge length","0.02% of the original gauge length","10% of the gauge length"],a:0,e:"إجهاد الخضوع ($S_y$) يُعرّف هندسياً عند حدوث تشوه دائم مقداره 0.2% (0.002) من طول القياس."},
+{q:"The slope of the linear section of the stress-strain diagram represents:",o:["Poisson's ratio","Young's modulus of elasticity (E)","Modulus of rupture","Plastic elongation"],a:1,e:"ميل الجزء الخطي يمثل معامل المرونة الطولي (Young's Modulus E)."},
+{q:"For a linear, isotropic, homogeneous material, the relationship between E and G is:",o:["G = E(1 + ν)","G = E / (2(1 + ν))","G = 2E(1 + ν)","G = E / ν"],a:1,e:"العلاقة الثابتة الجامعة لمعاملات المرونة هي: $G = \\frac{E}{2(1+\\nu)}$."},
+{q:"For ductile materials, the compressive strength is usually:",o:["Much greater than the tensile strength","Approximately equal to the tensile strength (Suc ≈ Sut)","Always zero","Significantly lower than tensile strength"],a:1,e:"في المواد المطيلة تتساوى مقاومة الشد والضغط تقريباً ($S_{uc} \\approx S_{ut}$)."},
+{q:"In a plane stress condition:",o:["All stress components are zero","σz = τxz = τyz = 0","The normal strains on all surfaces are zero","Only shear stresses can exist"],a:1,e:"حالة الإجهاد المستوي (Plane Stress) تعني انعدام مركبات الإجهاد في الاتجاه العمودي z."},
+{q:"Principal planes are defined as planes that carry:",o:["Maximum shear stress","Zero shear stress (τ = 0)","Zero normal stress","Hydrostatic pressure only"],a:1,e:"المستويات الرئيسية ينعدم عليها إجهاد القص تماماً ($\\tau = 0$)."},
+{q:"The maximum shear stress planes are oriented relative to the principal planes at an angle of:",o:["0 degrees","±30 degrees","±45 degrees","±90 degrees"],a:2,e:"مستويات أقصى إجهاد قص تميل بزاوية $\\pm 45^\\circ$ عن المستويات الرئيسية."},
+{q:"For static loads on ductile materials, the effect of stress concentration (Kt) is commonly:",o:["Doubled by a safety factor","Ignored, because the highest-stressed fibers yield locally and share the load","Applied only to shear stresses","Increased exponentially over time"],a:1,e:"في التحميل الساكن مع المواد المطيلة يُهمل $K_t$ لأن المعدن يخضع موضعياً ويعيد توزيع الإجهاد بأمان."},
+{q:"Which geometric modification effectively reduces stress concentration at a shaft shoulder?",o:["Using a sharp interior corner","Using a generous fillet radius","Decreasing the small diameter abruptly","Increasing surface roughness"],a:1,e:"زيادة نصف قطر الشطفة (Generous Fillet Radius) تجعل تدرج الإجهاد انسيابياً فيقل $K_t$."},
+{q:"For a thin-walled cylindrical vessel (wall thickness t ≤ r/10), the tangential (hoop) stress is:",o:["pr / (2t)","pr / t (double the longitudinal stress)","2pr / t","p r² / t"],a:1,e:"الإجهاد المماسي الحلقي هو $\\sigma_t = pr/t$ وهو ضعف الإجهاد الطولي $\\sigma_l = pr/(2t)$."},
+{q:"An aluminum cylinder has OD = 200 mm, t = 6 mm, allowable tangential stress = 82 MPa. Max pressure is:",o:["2.61 MPa","4.92 MPa","5.23 MPa","8.20 MPa"],a:2,e:"$r_i = 100 - 6 = 94\\text{ mm} \\implies p = 82 \\times 6 / 94 = \\mathbf{5.23\\text{ MPa}}$ (تمرين شيت المحاضرة)."},
+{q:"The maximum bending stress in a beam occurs at:",o:["The neutral axis where y = 0","The outermost fibers farthest from the neutral axis (y = c)","The centroid exclusively","The support bearings only"],a:1,e:"إجهاد الانحناء يتناسب خطياً مع البعد عن المحور المحايد ويصل أقصاه عند السطح الخارجي $\\sigma = Mc/I$."},
+{q:"Which static failure theory is NOT safe to use for ductile materials?",o:["Distortion Energy (von Mises) Theory","Maximum Shear Stress (Tresca) Theory","Maximum Normal (Principal) Stress Theory","Mohr-Coulomb Theory"],a:2,e:"نظرية أقصى إجهاد رئيسي غير آمنة إطلاقاً للمواد المطيلة (خاصة في الربع الرابع)."},
+{q:"In the Maximum Shear Stress (MSS) theory, yielding begins when τmax reaches:",o:["Sy","Sy / 2","Sut","Sut / 2"],a:1,e:"في نظرية تريسكا يبدأ الخضوع عندما يصل أقصى قص إلى نصف إجهاد الخضوع ($S_y/2$)."},
+{q:"In the Distortion Energy theory, the equivalent von Mises stress is compared directly to:",o:["The endurance limit Se","The ultimate tensile strength Sut","The yield strength Sy","The shear modulus G"],a:2,e:"في نظرية طاقة التشويه يُقارن إجهاد فون ميزس $\\sigma'$ بإجهاد الخضوع $S_y$."}
+],
+u3: [
+{q:"Fatigue failure in machine components is characterized by:",o:["Large plastic deformation visible before fracture","Sudden catastrophic fracture without visible warning under cyclic stresses below yield strength","Occurring only under constant high static compressive loads","Occurring only after exceeding ultimate strength on the first cycle"],a:1,e:"الكلال يحدث نتيجة إجهادات متقلبة أقل من الخضوع وينكسر الجزء فجأة دون أي تشوه لدن مرئي."},
+{q:"What physical mechanism occurs during Stage I of fatigue failure?",o:["Sudden ultimate rupture of the remaining cross-section","Micro-crack initiation due to localized cyclic plastic deformation (slip bands)","Opening and closing of macro-cracks forming beach marks","Uniform plastic necking across the whole component"],a:1,e:"المرحلة الأولى: نشوء شق مجهري ناتج عن تشوه لدن دوري موضعي على مستويات الانزلاق (Slip bands)."},
+{q:"Stage II of fatigue failure is physically characterized by:",o:["Micro-crack initiation via slip bands","Macro-crack propagation creating beach marks (striations)","Immediate total rupture of the whole cross-section","Uniform plastic necking"],a:1,e:"المرحلة الثانية تتميز باتساع الشق الماكروي وظهور علامات الشاطئ (Beach Marks)."},
+{q:"What occurs during Stage III of fatigue failure?",o:["Micro-crack initiation along grain boundaries","Slow cyclic beach mark generation","The remaining material is insufficient to carry the load, leading to sudden fast fracture","Elastic stiffening of the material"],a:2,e:"المرحلة الثالثة: يعجز المقطع المتبقي عن حمل الإجهاد فيحدث كسر نهائي سريع وفجائي."},
+{q:"In an S-N diagram for steels, what distinct feature defines the endurance limit Se'?",o:["A sudden vertical drop at 100 cycles","A distinct knee near 10^6 cycles where the curve becomes horizontal","Continuous downward slope with no knee","A linear increase of strength with cycles"],a:1,e:"في الصلب تظهر ركبة (Knee) أفقية عند حوالي مليون دورة ($10^6$) تمثل حد التحمل للحياة اللانهائية."},
+{q:"A steel has Sut = 800 MPa. The estimated endurance limit of the rotating-beam specimen is:",o:["800 MPa","400 MPa","200 MPa","700 MPa"],a:1,e:"بما أن $S_{ut} \\le 1400\\text{ MPa}$ فإن $S_e' = 0.5 \\times 800 = \\mathbf{400\\text{ MPa}}$."},
+{q:"A steel has Sut = 1600 MPa. The estimated uncorrected endurance limit is:",o:["800 MPa","700 MPa (capped maximum)","1600 MPa","1000 MPa"],a:1,e:"عندما تتجاوز المتانة 1400 MPa يثبت حد التحمل عند السقف الأقصى 700 MPa."},
+{q:"Which statement about nonferrous metals (such as aluminum, brass, and copper) is correct?",o:["They have a distinct knee and endurance limit at 10^6 cycles","They have NO true endurance limit (curve never becomes truly horizontal)","They always follow the 0.5 Sut rule","They cannot fail by fatigue under any load"],a:1,e:"المعادن غير الحديدية كالألومنيوم والنحاس ليس لها حد تحمل حقيقي ثابت (No true endurance limit)."},
+{q:"For axial fatigue loading, the Marin size factor kb is always taken as:",o:["kb = 0.85","kb = 0.59","kb = 1.0 (no size effect because stress distribution is uniform)","kb = 0.90"],a:2,e:"في التحميل المحوري $k_b = 1.0$ دائماً لانتظام توزيع الإجهاد عبر كامل المقطع بدون تدرج انحناء."},
+{q:"For non-rotating round sections in bending, what is the effective diameter de used to find kb?",o:["de = d","de = 0.370 d","de = 0.808 d","de = 0.50 d"],a:1,e:"وفق معادلات مارين: للمقطع الدائري غير الدوار $d_e = 0.370 d$."},
+{q:"For a rectangular section (h x b) in bending, what is the effective diameter de?",o:["de = 0.808 sqrt(h * b)","de = 0.370 (h + b)","de = sqrt(h * b)","de = 0.50 h"],a:0,e:"للمقطع المستطيل في الانحناء: $d_e = 0.808 \\sqrt{hb}$."},
+{q:"For pure torsional fatigue loading, the load factor kc in Marin equation is:",o:["1.00","0.85","0.59","0.50"],a:2,e:"معامل نوع التحميل: الانحناء = 1.0، المحوري = 0.85، والقص/الليّ = 0.59."},
+{q:"If the ultimate tensile strength Sut is known directly at the operating temperature, the temperature factor is:",o:["kd = 0.59","kd = 1.0","kd = 0.85","kd = 0.70"],a:1,e:"القاعدة الذهبية: إذا عُرفت المتانة عند حرارة التشغيل نضع $k_d = 1.0$ مباشرة."},
+{q:"For a reliability goal of 99%, the reliability factor ke in Marin equation is:",o:["1.000","0.897","0.814","0.753"],a:2,e:"من جدول الموثوقية: عند 99% تكون $k_e = 0.814$."},
+{q:"How does material tensile strength affect surface factor ka sensitivity?",o:["Higher strength steels are LESS sensitive to surface roughness","Higher strength steels are MORE sensitive to surface roughness (ka drops much faster)","Strength has zero effect on surface factor","Only nonferrous metals are sensitive"],a:1,e:"الصلب عالي المقاومة أكثر حساسية لخشونة السطح ويهبط معامل سطحه $k_a$ بشكل أسرع."},
+{q:"For gray cast irons, the recommended constant value of notch sensitivity q is:",o:["q = 1.00","q = 0.85","q = 0.20","q = 0.00"],a:2,e:"الحديد الزهر ممتلئ برقاقات الجرافيت التي تعمل كشقوق مسبقة، فحساسيته ثابتة وموصى بها $q = 0.20$."},
+{q:"If a material is completely insensitive to a geometric notch (q = 0), the fatigue notch factor Kf is:",o:["Kf = 0","Kf = 1.0","Kf = Kt","Kf = infinity"],a:1,e:"$K_f = 1 + q(K_t - 1) \\implies 1 + 0 = \\mathbf{1.0}$."},
+{q:"If a material is 100% fully sensitive to a geometric notch (q = 1), the fatigue notch factor Kf is:",o:["Kf = 1.0","Kf = Kt","Kf = Kt / 2","Kf = 0"],a:1,e:"عندما تكون الحساسية $q=1$ يصبح المعامل الفعلي مساوياً للنظري تماماً $K_f = K_t$."},
+{q:"How does a compressive mean stress generally affect fatigue life?",o:["It increases fatigue life by holding micro-cracks closed","It drastically decreases fatigue life","It has zero effect on crack growth","It causes immediate fast fracture"],a:0,e:"إجهاد الضغط المتوسط يغلق الشقوق ميكانيكياً ويبطئ نموها فيزيد من عمر الكلال."},
+{q:"How does a tensile mean stress affect fatigue life?",o:["It increases fatigue life","It decreases fatigue life by pulling cracks open and accelerating propagation","It changes ductile fracture to creep","It has no impact on cycles to failure"],a:1,e:"الشد المتوسط يفتح الشقوق ويسرع نموها فيقلل عمر الكلال."},
+{q:"In a 'repeated loading' condition, what are the values of minimum stress and stress ratio R?",o:["σmin = -σmax, R = -1","σmin = 0, R = 0 (and σa = σm)","σmin = σmax, R = 1","σm = 0, R = -1"],a:1,e:"التحميل المتكرر (Repeated): الإجهاد الأدنى صفر ($\\sigma_{\\min}=0$) ونسبة الإجهاد $R=0$ والإجهاد المتناوب يساوي المتوسط ($\\sigma_a = \\sigma_m$)."},
+{q:"In a 'completely reversed' loading condition, what are the values of mean stress and stress ratio R?",o:["σm = 0, R = -1","σm = σmax, R = 0","σmin = 0, R = 0","σa = 0, R = 1"],a:0,e:"التحميل المتناوب كلياً: الإجهاد المتوسط صفر ($\\sigma_m = 0$) ونسبة الإجهاد $R = -1$."},
+{q:"Which fatigue failure criterion under fluctuating stresses is the MOST CONSERVATIVE?",o:["Modified Goodman criterion","Gerber parabolic criterion","Soderberg criterion (uses yield strength Sy for mean stress)","ASME-Elliptic criterion"],a:2,e:"معيار سودربرج (Soderberg) هو الأكثر تحفظاً لأنه يقارن الإجهاد المتوسط بإجهاد الخضوع $S_y$ لمنع أي خضوع لدن."},
+{q:"The Gerber fatigue failure criterion is graphically represented by:",o:["A straight line connecting Se and Sy","A straight line connecting Se and Sut","A parabola connecting Se and Sut (representing the best fit of experimental data)","An ellipse connecting Se and Sy"],a:2,e:"معيار جيربر يمثله قطع مكافئ (Parabola) وهو أفضل تطابق إحصائي (Best fit) لمتوسط نتائج التجارب."},
+{q:"For pure torsion on a ductile, polished, notch-free cylindrical specimen, the steady shear stress component:",o:["Drastically reduces torsional endurance limit","Has NO effect on the torsional endurance limit","Causes immediate fatigue failure","Doubles the alternating shear stress"],a:1,e:"أثبتت التجارب أن إجهاد القص الثابت ليس له تأثير على حد التحمل في الليّ للمواد المطيلة المصقولة الخالية من الحزوز."}
+],
+u4: [
+{q:"A machine shaft is best defined as:",o:["A stationary member supporting bearings only","A rotating member which transmits power and torque","A fastening bolt with threads","A friction brake disc"],a:1,e:"العمود عضو دوار ناقل للقدرة والعزم ويدعم التروس والبكرات."},
+{q:"How is a shaft distinguished from an axle?",o:["An axle transmits high torque, while a shaft carries no torque","A shaft rotates and transmits power/torque, while an axle carries wheels/pulleys with NO torque transmission","An axle is always flexible","There is no engineering difference"],a:1,e:"العمود (Shaft) دوار وينقل عزماً وقدرة، بينما المحور (Axle) يحمل عجلات/بكرات ولا ينقل عزماً بل يتعرض لانحناء فقط."},
+{q:"A spindle shaft is best defined as:",o:["A very long line shaft for factory machines","A short machine shaft (e.g., machine tool headstock spindle)","A shaft integral with an internal combustion engine","A flexible drive cable"],a:1,e:"المغزل (Spindle) هو عمود قصير عالي الدقة كالمستخدم في ظروف المخارط وماكينات الورش."},
+{q:"A counter shaft is used to:",o:["Support the main engine pistons directly","Connect a prime mover to a line shaft or driven machine to adjust speed/torque","Replace flexible couplings entirely","Measure rotational speed only"],a:1,e:"العمود الوسيط (Counter Shaft) يربط المحرك الرئيسي بعمود الخط أو بالماكينة لتغيير السرعة أو العزم."},
+{q:"According to the golden principle, shaft deflection and rigidity are controlled by:",o:["Material properties (tensile strength and hardness)","Geometry (diameter, length, and cross-section), NOT material","Rotational speed only","Surface finish"],a:1,e:"الانحراف والصلادة والإجهاد يتحكم فيها الشكل الهندسي (Geometry)، بينما المتانة وحدها تتحكم فيها خواص المادة."},
+{q:"Why does replacing carbon steel with high-strength alloy steel NOT reduce shaft deflection?",o:["Because alloy steel is softer than carbon steel","Because all steels have essentially the same modulus of elasticity (E ≈ 207 GPa)","Because alloy steel has lower density","Because alloy steel increases bending moment"],a:1,e:"لأن جميع أنواع الصلب لها نفس معامل المرونة تقريباً ($E \\approx 207\\text{ GPa}$)، فالصلادة والانحراف يعتمدان على القطر فقط."},
+{q:"Cold-drawn steel shafts are typically used for diameters:",o:["d < 75 mm (3 inches)","d > 200 mm","Any diameter without restriction","d > 500 mm"],a:0,e:"الصلب المسحوب على البارد نموذجي للأقطار الأقل من 75 مم ($< 3\\text{ in}$)."},
+{q:"For spline shafts subjected to severe shock conditions, the recommended material is:",o:["Cast gray iron","Oil-quenched SAE 3245 steel","Pure copper","Thermoplastic nylon"],a:1,e:"للشرائح تحت صدمات شديدة يُوصى بصلب SAE 3245 المروى بالزيت."},
+{q:"The primary means of axially locating components and carrying thrust loads on a shaft is:",o:["Adhesive tape","Shaft shoulders","Friction alone","Flexible couplings"],a:1,e:"أكتاف العمود (Shoulders) هي الوسيلة الرئيسية للتثبيت المحوري وحمل قوى الدفع."},
+{q:"Retaining rings mounted in grooves on a shaft are suitable for:",o:["Reasonably low / light axial forces only","Extremely heavy thrust shock loads","Replacing all radial bearings","Pure high torque transmission"],a:0,e:"حلقات التثبيت مخصصة للأحمال المحورية الخفيفة لأن مجاريها تحدث تركيز إجهاد عالي ($K_t \\approx 5.0$)."},
+{q:"Keys on a shaft are intentionally designed as the 'weakest link' so that they:",o:["Reduce the total weight of the assembly","Fail first by shear during severe overload, protecting expensive shafts and gears","Eliminate all rotational vibrations","Increase the speed ratio"],a:1,e:"تُصمم الريشة لتكون الحلقة الأضعف لتنقص بالقص أولاً عند الحمل الزائد فتضحي بنفسها لتحمي الموتور والعمود."},
+{q:"Splines are preferred over standard parallel keys when:",o:["Very high torque transmission with high precision is required","Only light axial loads are present","Manufacturing costs must be zero","The shaft is non-metallic"],a:0,e:"الشرائح تُستخدم لنقل عزوم هائلة وبدقة دورانية عالية وللتروس المنزلقة."},
+{q:"To minimize bending moments and shaft deflections, load-carrying components should be placed:",o:["Cantilevered far outboard of the bearings","Between the bearings and close to them","Outside the machine frame entirely","On flexible extension cables"],a:1,e:"توضع التروس بين المسندين وقريباً منهما لتقليل عزوم الانحناء والانحراف."},
+{q:"In most mechanical shaft layouts, how many bearing supports should be used?",o:["Only two bearings","At least five bearings","One bearing only","As many as possible without alignment"],a:0,e:"يُفضل دائماً استخدام مسندين اثنين فقط (Two bearings) لتفادي مشاكل عدم المحاذاة والتعقيد الاستاتيكي."},
+{q:"For a rotating shaft subjected to constant bending and steady torque:",o:["Both bending and torsional stresses are steady","Bending is completely reversed (Mm = 0) and torsion is steady (Ta = 0)","Both stresses are completely reversed","Bending is steady and torsion is reversed"],a:1,e:"العمود الدوار بعزم انحناء وليّ ثابتين: الانحناء متناوب كلياً ($M_m=0$) والليّ ثابت ($T_a=0$)."},
+{q:"The polar moment of inertia J for a solid circular shaft of diameter d is:",o:["π d^4 / 64","π d^4 / 32","π d^3 / 16","π d^2 / 4"],a:1,e:"عزم القصور الذاتي القطبي لليّ $J = \\pi d^4 / 32$، بينما للانحناء $I = \\pi d^4 / 64$."},
+{q:"Critical stress evaluation locations on a shaft occur at:",o:["The central axis of the shaft where r = 0","The outer surface, locations of high bending moment, torque presence, and stress raisers","The bearing inner races exclusively","The keyway bottom only where torque is zero"],a:1,e:"المواقع الحرجة تقع على السطح الخارجي وعند نقاط العزوم الكبيرة وتركيزات الإجهاد."},
+{q:"In the initial shaft design stage when diameter is unknown, the size factor is assumed to be:",o:["kb = 1.0","kb = 0.90","kb = 0.59","kb = 0.75"],a:1,e:"في الخطوة الأولى يُفترض $k_b = 0.90$ لعدم معرفة القطر بعد."},
+{q:"In initial shaft design, standard typical assumed values are:",o:["n = 1.5, D/d = 1.2, r/d = 0.1","n = 5.0, D/d = 3.0, r/d = 0.5","n = 0.5, D/d = 1.0, r/d = 0.01","n = 10, D/d = 2.0, r/d = 0.02"],a:0,e:"الافتراضات القياسية الأولية: $n=1.5, D/d=1.2, r/d=0.1, k_b=0.90$."},
+{q:"According to Table 7-1, what is the estimated Kt for a well-rounded shoulder fillet (r/d = 0.1) in bending?",o:["Kt = 2.7","Kt = 1.7","Kt = 5.0","Kt = 1.0"],a:1,e:"من جدول 7-1: الشطفة المستديرة بسخاء ($r/d=0.1$) في الانحناء تعطي $K_t = 1.7$ وفي الليّ $K_{ts} = 1.5$."},
+{q:"According to Table 7-1, what is the estimated Kt for a sharp shoulder fillet (r/d = 0.02) in bending?",o:["Kt = 2.7","Kt = 1.7","Kt = 1.0","Kt = 5.0"],a:0,e:"من جدول 7-1: الشطفة الحادة ($r/d=0.02$) في الانحناء تعطي $K_t = 2.7$."},
+{q:"According to Table 7-1, what is the estimated Kt for a retaining ring groove in bending?",o:["Kt = 1.7","Kt = 2.14","Kt = 5.0","Kt = 1.0"],a:2,e:"من جدول 7-1: مجرى حلقة التثبيت يسبب تركيز إجهاد عالي جداً $K_t = 5.0$ في الانحناء و $3.0$ في الليّ."},
+{q:"According to Table 7-1, what is the estimated Kt in bending for an end-mill keyseat versus a sled-runner keyseat?",o:["End-mill = 2.14, Sled-runner = 1.7","End-mill = 1.7, Sled-runner = 2.14","Both are 5.0","Both are 1.0"],a:0,e:"مجرى الريشة الطرفي $K_t = 2.14$ بينما المنزلق أفضل بانتقال تدريجي $K_t = 1.7$."},
+{q:"For a rotating shaft with steady torque, the DE-Goodman diameter formula simplifies to:",o:["d^3 = (16n/π) [ 2 Kf Ma / Se + sqrt(3) Kfs Tm / Sut ]","d^3 = (16n/π) [ Kf Ma / Se + Kfs Tm / Sy ]","d = 32 M / (π Se)","d^3 = (32n/π) [ Ma / Sut ]"],a:0,e:"المعادلة المبسطة لجودمان للعمود الدوار: $d^3 = \\frac{16n}{\\pi} \\left[ \\frac{2 K_f M_a}{S_e} + \\frac{\\sqrt{3} K_{fs} T_m}{S_{ut}} \\right]$."},
+{q:"What is the key difference between DE-Goodman and DE-Soderberg shaft sizing equations?",o:["DE-Goodman uses Se while DE-Soderberg uses Sut","DE-Goodman uses Sut for the torque term (Tm), while DE-Soderberg uses Sy (yield strength)","DE-Soderberg ignores bending completely","There is no mathematical difference"],a:1,e:"معادلة جودمان تقسم عزم الليّ المتوسط على $S_{ut}$ بينما سودربرج تقسمه على إجهاد الخضوع $S_y$."}
+],
+pe1: [
+{q:"Which design phase is characterized by the creation of complete technical drawings, bills of materials, and precise tolerances for manufacturing?",o:["Feasibility study","Conceptual design","Detailed production design","Problem identification"],a:2,e:"مرحلة التصميم التفصيلي (Detailed Design) هي التي تُنتج الرسومات والتفاوتات وقوائم المواد BOM."},
+{q:"Organizations like the American Society of Mechanical Engineers (ASME) are primarily known for their role in:",o:["Directly funding construction projects","Providing basic STEM education","Enforcing international trade laws","Developing and publishing technical codes and standards"],a:3,e:"ASME تطور وتنشر الرموز والمعايير الهندسية الميكانيكية مثل كود الغلايات BPVC."},
+{q:"In the context of engineering design, why is reliability a critical parameter?",o:["It ensures the product looks appealing","It is the easiest parameter to calculate","It guarantees the product performs its required function under stated conditions for a specified period","It significantly reduces initial material cost"],a:2,e:"الموثوقية تضمن أداء المنتج لوظيفته تحت الظروف المحددة لفترة زمنية معينة دون عطل."},
+{q:"What is the predominant mechanism leading to fatigue failure in mechanical parts?",o:["Exposure to constant, static compressive loads","Rapid oxidation due to high temperatures","Subjecting the material to fluctuating or cyclic stresses over time","Sudden impact loading exceeding ultimate strength"],a:2,e:"الكلال يحدث نتيجة إجهادات متذبذبة متكررة مع الزمن أقل من إجهاد الخضوع."},
+{q:"An S-N diagram used in fatigue testing graphically represents the relationship between:",o:["Stress amplitude and the number of cycles until failure","Strain rate and temperature","Ultimate tensile strength and hardness","Time and static load magnitude"],a:0,e:"يرسم سعة الإجهاد مقابل عدد الدورات حتى الانهيار على مقاس لوغاريتمي."},
+{q:"What is the fundamental objective of the engineering design process beyond simply analyzing existing systems?",o:["Routine documentation","Creating aesthetic prototypes","Strict adherence to historical data","Generating innovative solutions to defined problems (Synthesis)"],a:3,e:"الهدف الأساسي هو التوليف والابتكار (Synthesis) وحل المشكلات الهندسية."},
+{q:"According to standard engineering codes of ethics, what is the overriding responsibility of an engineer?",o:["Maximizing corporate profit margins","Accelerating product release schedules","Ensuring the safety, health, and welfare of the public","Prioritizing technological novelty"],a:2,e:"المبدأ الأول الحاكم: تقديم سلامة وصحة ورفاهية الجمهور على كل اعتبار."},
+{q:"In which stage of the design process are multiple potential schemes developed and coarsely evaluated to select the best direction?",o:["Detailed design","Conceptual design","Problem definition","Manufacturing refinement"],a:1,e:"مرحلة التصميم المفاهيمي تولد خيارات وحلولاً بديلة وتفاضل بينها."},
+{q:"Why are engineering standards, such as those provided by ASTM or ISO, crucial in the design industry?",o:["They are merely optional suggestions for beginners","They provide universally accepted benchmarks for quality, safety, and compatibility","They are intended to stifle innovation","They replace the need for calculations"],a:1,e:"المعايير تضع أسساً موحدة للجودة والسلامة والتوافقية الهندسية."},
+{q:"The primary reason for incorporating high safety factors in structural design is:",o:["To ensure public welfare and prevent catastrophic failure","To make the product heavier and more expensive","To speed up manufacturing","To meet aesthetic requirements"],a:0,e:"معامل الأمان يمنع الانهيارات الكارثية ويحمي أرواح وسلامة المستخدمين."},
+{q:"If the radius of a shoulder fillet on a shaft is increased, the theoretical stress concentration factor (Kt):",o:["Increases","Becomes zero","Remains constant","Decreases"],a:3,e:"زيادة نصف قطر الشطفة (Fillet Radius) تجعل تدرج الإجهاد انسيابياً فيقل معامل التركيز $K_t$."},
+{q:"Designing a component with sharp interior corners is poor practice because sharp corners:",o:["Act as severe stress raisers, causing high localized stresses","Reduce weight too much","Have no effect on integrity","Improve magnetic field flow"],a:0,e:"الزوايا الحادة رافعات إجهاد حادة تنشأ عندها شقوق الكلال سريعاً."},
+{q:"A material has an unmodified endurance limit of 300 MPa. If the fatigue notch factor Kf = 1.5, what is the effective endurance limit?",o:["450 MPa","300 MPa","200 MPa","150 MPa"],a:2,e:"حد التحمل الفعلي = $300 / 1.5 = \\mathbf{200\\text{ MPa}}$."},
+{q:"A compressive mean stress generally affects fatigue life by:",o:["Increasing it","Decreasing it","Having no effect","Causing immediate fracture"],a:0,e:"الضغط المتوسط يغلق الشقوق ويزيد من عمر الكلال."},
+{q:"When applying the fatigue notch factor (Kf) in design, it effectively:",o:["Increases material strength","Reduces applied load","Increases stiffness","Reduces fatigue strength at the notch"],a:3,e:"معامل النوتش $K_f$ يقلل مقاومة الكلال عند موقع تركيز الإجهاد."},
+{q:"Increasing the mean stress from zero to a high tensile value will cause cycles to failure to:",o:["Increase","Decrease","Stay unchanged","Be independent of amplitude"],a:1,e:"زيادة الشد المتوسط تسرع فتح الشقوق وتقلل عمر الكلال."},
+{q:"What is the likely consequence of failing to account for high stress concentrations in cyclic loading?",o:["Longer service life","Increased yield strength locally","Higher manufacturing cost","Premature fatigue failure"],a:3,e:"إهمال تركيز الإجهادات يؤدي إلى انهيار كلال مبكر وغير متوقع."},
+{q:"A plate with a central hole has nominal stress 60 MPa and Kt = 2.5. What is the peak localized stress?",o:["24 MPa","60 MPa","120 MPa","150 MPa"],a:3,e:"الإجهاد الذروي = $2.5 \\times 60 = \\mathbf{150\\text{ MPa}}$."},
+{q:"If a notch's root radius becomes smaller (sharper), the stress concentration factor (Kt):",o:["Decreases","Stays the same","Increases","Becomes unity"],a:2,e:"كلما كان الحز أكثر حدة وصغراً زاد معامل تركيز الإجهاد $K_t$."},
+{q:"In static analysis of brittle materials, Kt is used to calculate:",o:["Average stress","Peak localized stress","Modulus of resilience","Thermal expansion"],a:1,e:"في المواد الهشة يُحسب الإجهاد الذروي بضرب الاسمي في $K_t$."},
+{q:"The endurance limit (Se) of a ferrous material is defined as:",o:["The stress at which the material yields plastically","The maximum stress tolerated for exactly 1,000 cycles","The stress value right before final fracture","The maximum stress level that the material can withstand for an infinite number of load cycles without failing"],a:3,e:"حد التحمل هو أقصى إجهاد تتحمله المادة لعدد لا نهائي من الدورات دون كسر."},
+{q:"Which of the following is a significant source of uncertainty that engineers must account for?",o:["Inherent variability in material properties and manufacturing processes","The precise definitions of SI units","The fixed value of gravitational acceleration","The mathematical value of pi"],a:0,e:"تشتت خواص المواد وتفاوتات التصنيع تمثل مصادر عدم اليقين الأساسية."},
+{q:"How does the presence of a stress raiser (like a sharp corner) generally affect fatigue life?",o:["It dramatically increases fatigue life","It has no appreciable effect","It significantly decreases fatigue life by accelerating crack initiation","It makes life dependent only on temperature"],a:2,e:"مراكز الإجهاد تسرّع بدء ونشوء الشقوق وتقلل العمر الافتراضي."},
+{q:"In fatigue design, a Factor of Safety is applied primarily to:",o:["Increase physical weight","Compensate for uncertainties in loading, material behavior, and approximations","Reduce cost of materials","Improve surface aesthetics"],a:1,e:"معامل الأمان يعوض عدم اليقين في المواد والأحمال والتقريبات التحليلية."},
+{q:"When comparing two loading scenarios with the same alternating stress, introducing a tensile mean stress causes life to:",o:["Increase","Become impossible to predict","Remain exactly the same","Decrease"],a:3,e:"الشد المتوسط يقلل عمر الكلال دائماً."},
+{q:"A fatigue fracture is distinct from a static ductile fracture because it:",o:["Occurs under dynamic, repetitive loads often below the yield strength","Always happens upon the first load application","Is caused solely by corrosion","Is accompanied by large visible plastic deformation"],a:0,e:"الكلال يحدث بإجهادات متكررة أقل من الخضوع وبلا تشوه لدن مرئي."},
+{q:"Comparing a mirror-polished surface to a rough-ground surface on the same steel part, the polished surface will result in:",o:["A lower fatigue strength","Unpredictable behavior","Identical performance","A higher fatigue strength"],a:3,e:"السطح المصقول خالٍ من الخدوش المجهرية مما يرفع مقاومة الكلال ($k_a$ أعلى)."},
+{q:"The fatigue notch factor (Kf) is used to account for:",o:["Reduction in fatigue strength due to geometric discontinuities","Strength increase due to heat treatment","Cryogenic temperature effects","Static yield strength"],a:0,e:"$K_f$ يراعي الأثر الفعلي للشكل الهندسي وحساسية المادة في خفض مقاومة الكلال."},
+{q:"For many steels, the fatigue strength for infinite life is empirically estimated as half of:",o:["Percent elongation","Ultimate tensile strength (Sut)","Modulus of elasticity","Poisson's ratio"],a:1,e:"حد التحمل النظري للصلب = $0.5 \\times S_{ut}$."},
+{q:"Which concept is defined as the highest stress level a material can withstand for infinite cycles without failure?",o:["Yield point","Ultimate strength","Endurance limit","Toughness modulus"],a:2,e:"حد التحمل (Endurance Limit) هو حد الإجهاد للحياة اللانهائية."},
+{q:"As operating temperature increases significantly above room temperature, the temperature factor usually:",o:["Decreases","Increases","Remains 1.0","Fluctuates randomly"],a:0,e:"ارتفاع درجة الحرارة يضعف متانة الفولاذ فيقل معامل الحرارة $k_d$."},
+{q:"If the uncorrected endurance limit is 200 MPa and the temperature factor is 0.8, what is the corrected endurance limit?",o:["160 MPa","250 MPa","200 MPa","180 MPa"],a:0,e:"$200 \\times 0.8 = \\mathbf{160\\text{ MPa}}$."},
+{q:"The size factor (kb) generally shows that as part size increases, fatigue strength:",o:["Increases","Decreases","Remains unaffected","Doubles every inch"],a:1,e:"زيادة الحجم تزيد احتمالية وجود عيوب مجهرية فتقل مقاومة الكلال ($k_b$ يقل)."},
+{q:"A shaft has Se' = 400 MPa, with kb = 0.85 and ka = 0.90. What is the modified endurance limit?",o:["306 MPa","340 MPa","360 MPa","400 MPa"],a:0,e:"$400 \\times 0.85 \\times 0.90 = \\mathbf{306\\text{ MPa}}$."},
+{q:"A material has Sut = 600 MPa. Endurance limit = 0.5 · Sut. If reliability factor = 0.81, what is Se?",o:["300 MPa","270 MPa","486 MPa","243 MPa"],a:3,e:"$S_e' = 300\\text{ MPa} \\implies S_e = 300 \\times 0.81 = \\mathbf{243\\text{ MPa}}$."},
+{q:"A shaft with modified endurance limit 300 MPa has alternating stress 100 MPa and Kf = 1.5. Factor of Safety?",o:["1.5","2.0","3.0","4.5"],a:1,e:"الإجهاد الفعلي = $1.5 \\times 100 = 150\\text{ MPa} \\implies n = 300 / 150 = \\mathbf{2.0}$."},
+{q:"If Kt = 3.0 and nominal alternating stress = 50 MPa, what is the peak alternating stress?",o:["1.7 MPa","50 MPa","100 MPa","150 MPa"],a:3,e:"الإجهاد الذروي = $3.0 \\times 50 = \\mathbf{150\\text{ MPa}}$."},
+{q:"The influence of surface finish on fatigue life is best described by:",o:["Rough surfaces give higher fatigue life","Surface finish has negligible impact","Polished surfaces improve fatigue resistance","Shot peening decreases life"],a:2,e:"الأسطح المصقولة تحسن مقاومة الكلال وتمنع بدء الشقوق."},
+{q:"If the radius of a notch is increased (made less sharp), fatigue strength generally:",o:["Increases","Decreases","Remains the same","Becomes unpredictable"],a:0,e:"زيادة نصف قطر النوتش تقلل تركيز الإجهادات وترفع مقاومة الكلال."},
+{q:"The theoretical stress concentration factor (Kt) measures:",o:["Material ductility","How geometric discontinuities amplify nominal stresses","Ratio of ultimate to yield strength","Thermal conductivity near a notch"],a:1,e:"معامل هندسي بحت يصف مضاعفة الانقطاع الهندسي للإجهاد الاسمي."},
+{q:"To reduce fatigue failure risk at a shaft step, best practice is to:",o:["Use a sharp corner","Reduce smaller diameter further","Use a generous fillet radius","Increase surface roughness"],a:2,e:"استخدام شطفة سخية (Generous Fillet Radius) يقلل $K_t$ ويحمي من الكلال."},
+{q:"Neglecting stress concentration effects in dynamic design often leads to:",o:["Overly heavy designs","Catastrophic premature failures","Improved properties","Lower costs"],a:1,e:"إهمال تركيز الإجهاد في التحميل الديناميكي يقود لانهيارات كارثية مفاجئة."},
+{q:"Engineers determine Kt for standard shapes by:",o:["Tensile testing smooth specimens","Using empirical charts or analytical formulas in handbooks","Guessing between 1 and 2","Measuring hardness"],a:1,e:"تُستخرج قيم $K_t$ من المنحنيات والجداول القياسية في المراجع الهندسية."},
+{q:"Introducing a transverse hole into a bar under tension causes stress distribution to be:",o:["Uniform","Lower at hole edge","Highly non-uniform with a peak at the hole edge","Zero"],a:2,e:"الثقب يقطع خطوط سريان الإجهاد فتتكدس عند حافته مسببة إجهاداً ذروياً."},
+{q:"Which geometric modification minimizes stress concentration?",o:["Deeper, narrower notch","Rapid reduction in cross-section","Sharp internal corners","Larger radius of curvature"],a:3,e:"نصف القطر الأكبر يجعل انتقال خطوط الإجهاد تدريجياً فيقل معامل التركيز."},
+{q:"Marin factors modify the endurance limit to account for:",o:["Chemical composition only","Surface finish, size, temperature, reliability, etc.","Manufacturing cost","Rotational speed only"],a:1,e:"معادلة مارين تعدل حد التحمل لعوامل السطح والحجم والحرارة والموثوقية والتحميل."},
+{q:"Kf is distinct from Kt because Kf represents the:",o:["Theoretical stress concentration factor","Load application factor","Thermal expansion factor","Fatigue notch factor accounting for material notch sensitivity"],a:3,e:"$K_f$ يدخل حساسية المادة الفعلية للشقوق ($q$) بينما $K_t$ هندسي نظري فقط."}
+],
+pe2: [
+{q:"In a Problem Statement Matrix, a constraint describes:",o:["A criterion used to rank competing concepts","Something the design must not violate or exceed","A person or group affected by the design","A function that the final product must perform"],a:1,e:"القيد (Constraint) هو شرط حدّي لا يجوز للتصميم تجاوزه أو مخالفته."},
+{q:"What is the main purpose of function analysis during conceptual design?",o:["To calculate final manufacturing cost","To determine required material properties","To verify finished product experimentally","To decompose an overall function into sub-functions"],a:3,e:"تحليل الوظائف يفكك الوظيفة الكلية الكبرى إلى وظائف فرعية أبسط."},
+{q:"What does a morphological chart primarily accomplish?",o:["It maps sub-functions to possible solution elements","It determines the factor of safety for each component","It establishes allowable stress for each material","It verifies compliance with standards"],a:0,e:"المخطط المورفولوجي يربط كل وظيفة فرعية بعدة حلول هندسية ممكنة."},
+{q:"Which phase is described as the creative core of the engineering design process?",o:["Detailed design","Production improvement","Conceptual design","Testing and validation"],a:2,e:"التصميم المفاهيمي (Conceptual Design) هو النواة الإبداعية لتوليد الأفكار."},
+{q:"Which of the following is identified as a concept-generation method?",o:["Failure-mode calculation","Brainstorming","Fatigue-life testing","Stress-concentration analysis"],a:1,e:"العصف الذهني (Brainstorming) هو إحدى أشهر طرق توليد المفاهيم."},
+{q:"What is the primary purpose of the Pugh Concept Selection Matrix?",o:["To calculate fatigue strength of materials","To determine dimensions from selected concept","To screen concepts using comparative criteria","To validate performance of final prototype"],a:2,e:"مصفوفة بوغ (Pugh Matrix) تُستخدم لغربلة وتقييم المفاهيم البديلة واستبعاد الضعيفة."},
+{q:"Concept scoring uses:",o:["Only qualitative judgments from the design team","Unweighted comparisons of manufacturing processes","Experimental fatigue data for each design concept","Quantitative weighted decision matrices to rank concepts"],a:3,e:"تسجيل النقاط يعتمد على مصفوفات قرار كمية وموزونة للمفاضلة وترتيب المفاهيم."},
+{q:"Which sequence correctly represents the six progressive design phases?",o:["Needs analysis → conceptual → embodiment → detailed → testing/validation → production/improvement","Conceptual → needs analysis → detailed → embodiment → production → testing","Needs analysis → detailed → conceptual → testing → embodiment → production","Embodiment → conceptual → needs analysis → detailed → production → testing"],a:0,e:"الترتيب المنهجي الصحيح يبدأ بتحليل الاحتياجات وينتهي بالإنتاج والتحسين."},
+{q:"Which design phase has the greatest long-term influence on product performance and cost?",o:["Detailed design","Conceptual design","Production improvement","Testing and validation"],a:1,e:"مرحلة التصميم المفاهيمي تحسم أكثر من 70% من التكلفة النهائية للمنتج."},
+{q:"What is the main purpose of DFX methodologies?",o:["To replace engineering analysis with experience","To reduce design documentation and eliminate testing","To focus exclusively on reducing manufacturing costs","To consider the complete product lifecycle in design decisions"],a:3,e:"منهجية DFX تراعي دورة حياة المنتج كاملة من التصنيع والتجميع حتى التدوير."},
+{q:"Which set contains only DFX methodologies identified in the material?",o:["CAD, FEA, QFD, and CAM","DFM, CAD, FEA, and DFA","DFM, DFA, DFR, DFS, DFE, and DFC","FMEA, QFD, CAD, CAM, and DFM"],a:2,e:"عائلة DFX: للتصنيع، للتجميع، للموثوقية، للسلامة، للبيئة، وللتكلفة."},
+{q:"Which organization is associated with pressure vessels, boilers, piping, and related mechanical standards?",o:["ASTM International","ASME","IEEE","DIN"],a:1,e:"ASME هي المنظمة المسؤولة عن معايير الغلايات وأوعية الضغط والمواسير."},
+{q:"Which statement correctly describes the role of engineering standards?",o:["They provide validated methods, material properties, and design guidance","They eliminate the need for professional judgment","They apply only after production","They are optional alternatives to all applicable codes"],a:0,e:"المعايير توفر أساليب مصممة وخواص مواد موثقة وإرشادات معتمدة."},
+{q:"Which factor is specifically identified as a source of uncertainty considered by design safety factors?",o:["Product color variation","Operator preference","Packaging dimensions","Variability in material properties"],a:3,e:"تشتت خواص المواد هو أحد مصادر عدم اليقين الخمسة الرئيسية."},
+{q:"According to the material, what is the primary purpose of a design safety factor?",o:["To increase nominal operating load","To eliminate all manufacturing variations","To account for uncertainties and consequences associated with failure","To ensure operation at maximum strength"],a:2,e:"معامل الأمان يعوض عدم اليقين في المواد والأحمال وعواقب الانهيار."},
+{q:"According to engineering ethics material, which principle has paramount importance?",o:["Protecting public safety","Protecting commercial interests","Protecting employer preferences","Protecting project schedules"],a:0,e:"حماية وسلامة الجمهور وصحته ورفاهيته لها الأولوية المطلقة دائماً."},
+{q:"Fatigue failure occurs primarily when:",o:["A component exceeds static yield strength in one load event","Stresses vary with time and failure occurs after repeated cycles","A component is subjected only to constant compressive loading","A material experiences deformation without any cyclic loading"],a:1,e:"الكلال يحدث عند تكرار الإجهادات وتغيرها مع الزمن تحت إجهاد أقل من الخضوع."},
+{q:"What occurs during Stage I of fatigue failure?",o:["The remaining material undergoes final ultimate fracture","A macro-crack repeatedly opens and closes","The crack reaches critical size and causes rupture","A micro-crack initiates through cyclic plastic deformation"],a:3,e:"المرحلة الأولى: نشوء شق مجهري بسبب الانزلاق والتشوه اللدن المتكرر."},
+{q:"Which statement about fatigue failure is given in the material?",o:["It always produces visible deformation before fracture","It occurs only when maximum stress exceeds yield strength","It can occur suddenly without visible warning in advance","It develops only under completely reversed loading conditions"],a:2,e:"الكلال يحدث فجأة وبدون سابق إنذار مرئي."},
+{q:"In the provided material, low-cycle fatigue generally corresponds to:",o:["N < 10³ cycles","N > 10³ cycles","N = 10⁶ cycles","N ≥ 10⁷ cycles"],a:0,e:"الكلال منخفض الدورات يقع تحت $10^3$ دورة."},
+{q:"What characterizes Stage II of fatigue failure?",o:["The crack progresses into a macro-crack and forms beach marks","The component immediately reaches final fracture","The material undergoes only elastic deformation","The crack remains microscopic throughout"],a:0,e:"المرحلة الثانية: اتساع الشق وظهور علامات الشاطئ (Beach Marks)."},
+{q:"Which three fatigue-life models are listed in the material?",o:["Goodman, Gerber, and Soderberg methods","Stress-life, strain-life, and linear elastic fracture mechanics","Marin, notch-sensitivity, and stress-concentration methods","Static, impact, and thermal prediction methods"],a:1,e:"النماذج الثلاثة: إجهاد–عمر، انفعال–عمر، وميكانيكا الكسر المرنة الخطية."},
+{q:"For steels, the knee in the S-N curve occurs near:",o:["10³ cycles","10⁶ cycles","10⁵ cycles","10⁷ cycles"],a:1,e:"ركبة الصلب تحدث عند نحو مليون دورة ($10^6$)."},
+{q:"The strength corresponding to the knee of the S-N curve for steels is called the:",o:["Endurance limit","Yield strength","Ultimate strength","Alternating strength"],a:0,e:"الإجهاد عند ركبة المنحنى يُسمى حد التحمل (Endurance Limit)."},
+{q:"What does the symbol Se' represent in the fatigue material?",o:["The endurance limit of an actual machine element","The alternating stress in a component","The endurance limit obtained for a carefully prepared specimen","The ultimate tensile strength"],a:2,e:"الرمز $S_e'$ (بالشرطة) لعينة المختبر المصقولة القياسية."},
+{q:"Why are Marin factors used in fatigue design?",o:["Actual machine-part testing is generally impractical","Laboratory specimens cannot be cyclically loaded","Fatigue testing cannot produce S-N diagrams","Machine components are always stronger than specimens"],a:0,e:"لأن اختبار القطع الحقيقية غير عملي ومكلف فنعدل قيمة المعمل بمعاملات مارين."},
+{q:"Which statement about nonferrous metals is given in the material?",o:["They always possess a clear endurance limit","They often do not have an endurance limit","They have an endurance limit exactly at 10⁶ cycles","They require no fatigue testing"],a:1,e:"المعادن غير الحديدية (كالألومنيوم) ليس لها حد تحمل حقيقي."},
+{q:"Which Marin factor accounts for the influence of surface finish?",o:["ka","kb","kc","kd"],a:0,e:"معامل السطح هو $k_a$."},
+{q:"Why does surface finish affect fatigue strength?",o:["It changes nominal dimensions","It influences crack initiation at localized stress concentrations","It eliminates stress concentrations","It determines operating temperature"],a:1,e:"الخشونة تؤثر على بدء ونشوء الشقوق المجهرية عند السطح."},
+{q:"The size factor kb is associated primarily with:",o:["Changes in material composition","Variations in operating temperature","The effect of component size on fatigue strength","Changes in reliability requirement"],a:2,e:"معامل الحجم يعالج أثر كبر أبعاد الجزء على نقص مقاومة الكلال."},
+{q:"According to the material, for axial loading the size factor is:",o:["kb = 0.59","kb = 0.50","kb = 1.10","kb = 1.0"],a:3,e:"في التحميل المحوري $k_b = 1.0$ لانتظام الإجهاد عبر كامل المقطع."},
+{q:"What does the loading factor kc account for?",o:["Changes in endurance limit caused by different fatigue-loading types","Changes caused by surface roughness","Changes caused by component diameter","Changes caused by reliability requirements"],a:0,e:"معامل التحميل $k_c$ يراعي نوع الحمل (انحناء=1، محوري=0.85، ليّ=0.59)."},
+{q:"What is the purpose of the reliability factor ke?",o:["To correct component diameter","To account for loading type","To adjust endurance-limit estimate for different reliabilities","To convert tensile strength into shear strength"],a:2,e:"معامل الموثوقية $k_e$ يعدل حد التحمل لنسب الموثوقية المختلفة (مثل 99% $\\implies 0.814$)."},
+{q:"If the ultimate strength is known directly at operating temperature, the material recommends using:",o:["kd = 0.59","kd = 1.0","kd = 0.50","kd = 0.85"],a:1,e:"إذا عُرفت المتانة عند حرارة التشغيل نستخدم مباشرة $k_d = 1.0$."},
+{q:"Which statement correctly describes notch sensitivity q?",o:["It ranges from 1 to 10","It ranges from 0 to 1, from not sensitive to fully sensitive","It is always equal to theoretical stress concentration factor","It is used only for static loading"],a:1,e:"حساسية الشق $q$ تتراوح بين 0 (غير حساسة) و1 (حساسة تماماً)."}
+]
+};
+
+const quizState = {};
+
+function renderQuiz(containerId, scoreId, data, labelPrefix){
+  const container = document.getElementById(containerId);
+  if(!container) return;
+  quizState[containerId] = { total:data.length, answered:0, correct:0 };
+  updateScoreDisplay(containerId, scoreId);
+  const letters = ['A','B','C','D'];
+  let html = '';
+  data.forEach((item, qIdx) => {
+    html += '<div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 transition-all" id="card-'+containerId+'-'+qIdx+'">'
+      + '<div class="flex items-center gap-2 mb-2 flex-wrap"><span class="bg-slate-800 text-teal-400 border border-slate-700 rounded-md px-2.5 py-0.5 text-xs font-bold font-mono">'+labelPrefix+' '+(qIdx+1)+'</span></div>'
+      + '<p class="font-en text-sm sm:text-base font-semibold text-slate-100 text-left mb-3" dir="ltr">'+item.q+'</p>'
+      + '<div class="space-y-2">';
+    item.o.forEach((opt, oIdx) => {
+      html += '<button class="opt-btn w-full text-left bg-slate-950/70 border border-slate-800 hover:border-teal-500/50 rounded-lg p-2.5 text-xs sm:text-sm text-slate-300 flex items-start gap-2" onclick="handleAnswer(\''+containerId+'\', \''+scoreId+'\', '+qIdx+', '+oIdx+')">'
+        + '<span class="font-bold text-teal-400 font-mono">'+letters[oIdx]+'.</span><span class="flex-1" dir="ltr">'+opt+'</span></button>';
+    });
+    html += '</div><div class="hidden mt-3 p-3 bg-indigo-950/40 border-r-4 border-indigo-500 rounded-lg text-xs sm:text-sm text-indigo-200" id="exp-'+containerId+'-'+qIdx+'">'
+      + '<b class="text-emerald-400 font-mono">✔ Correct: '+letters[item.a]+'</b> — '+item.e+'</div></div>';
+  });
+  container.innerHTML = html;
+}
+
+function handleAnswer(containerId, scoreId, qIdx, selectedIdx){
+  const card = document.getElementById('card-'+containerId+'-'+qIdx);
+  if(card.dataset.answered) return;
+  card.dataset.answered = "true";
+  const dataMap = {'quiz-container-u1':QUIZ_DATA.u1,'quiz-container-u2':QUIZ_DATA.u2,'quiz-container-u3':QUIZ_DATA.u3,'quiz-container-u4':QUIZ_DATA.u4,'quiz-container-pe1':QUIZ_DATA.pe1,'quiz-container-pe2':QUIZ_DATA.pe2};
+  const data = dataMap[containerId];
+  const q = data[qIdx];
+  const btns = card.querySelectorAll('.opt-btn');
+  btns.forEach((btn, idx) => {
+    btn.disabled = true;
+    if(idx === q.a){ btn.classList.add('correct'); }
+    else if(idx === selectedIdx){ btn.classList.add('wrong'); }
+  });
+  const state = quizState[containerId];
+  state.answered++;
+  if(selectedIdx === q.a){ state.correct++; }
+  const expBox = document.getElementById('exp-'+containerId+'-'+qIdx);
+  if(expBox) expBox.classList.remove('hidden');
+  updateScoreDisplay(containerId, scoreId);
+  typesetMath(card);
+}
+
+function updateScoreDisplay(containerId, scoreId){
+  const scoreBox = document.getElementById(scoreId);
+  const state = quizState[containerId];
+  if(!scoreBox || !state) return;
+  const pct = state.answered > 0 ? Math.round((state.correct/state.answered)*100) : 0;
+  const color = state.answered > 0 ? (pct >= 75 ? 'text-emerald-400' : pct >= 50 ? 'text-amber-400' : 'text-rose-400') : 'text-slate-400';
+  scoreBox.innerHTML = 'أجبت: <b>'+state.answered+'</b> / '+state.total+' · الدرجة: <b class="'+color+'">'+state.correct+' ('+pct+'%)</b>';
+}
+
+function switchTab(targetId, btn){
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+  const target = document.getElementById(targetId);
+  if(target) target.classList.remove('hidden');
+  if(btn) btn.classList.add('active');
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+function switchPastExam(exam){
+  const p1Wrapper = document.getElementById('pe1-wrapper');
+  const p2Wrapper = document.getElementById('pe2-wrapper');
+  const btn1 = document.getElementById('btn-p1-tab');
+  const btn2 = document.getElementById('btn-p2-tab');
+  if(exam === 'p1'){
+    p1Wrapper.classList.remove('hidden');
+    p2Wrapper.classList.add('hidden');
+    btn1.className = "px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md transition";
+    btn2.className = "px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-amber-300 border border-amber-500/30 transition";
+  } else {
+    p1Wrapper.classList.add('hidden');
+    p2Wrapper.classList.remove('hidden');
+    btn2.className = "px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md transition";
+    btn1.className = "px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-amber-300 border border-amber-500/30 transition";
+  }
+}
+
+function calcMarin(){
+  const sut = parseFloat(document.getElementById('c-sut').value) || 0;
+  const ka = parseFloat(document.getElementById('c-ka').value) || 1;
+  const kb = parseFloat(document.getElementById('c-kb').value) || 1;
+  const kc = parseFloat(document.getElementById('c-kc').value) || 1;
+  const kd = parseFloat(document.getElementById('c-kd').value) || 1;
+  const ke = parseFloat(document.getElementById('c-ke').value) || 1;
+  const sep = sut <= 1400 ? 0.5 * sut : 700;
+  const se = ka * kb * kc * kd * ke * sep;
+  document.getElementById('out-sep').innerText = sep.toFixed(1);
+  document.getElementById('out-se').innerText = se.toFixed(1);
+}
+
+function calcShaft(){
+  const Ma = parseFloat(document.getElementById('c-ma').value) || 0;
+  const Tm = parseFloat(document.getElementById('c-tm').value) || 0;
+  const n = parseFloat(document.getElementById('c-n').value) || 1.5;
+  const Se = (parseFloat(document.getElementById('c-se-val').value) || 200) * 1e6;
+  const Sut = (parseFloat(document.getElementById('c-sut-val').value) || 700) * 1e6;
+  const Kf = parseFloat(document.getElementById('c-kf-val').value) || 2.0;
+  const Kfs = Kf;
+  const term1 = (2 * Kf * Ma) / Se;
+  const term2 = (Math.sqrt(3) * Kfs * Tm) / Sut;
+  const d3 = (16 * n / Math.PI) * (term1 + term2);
+  const d = Math.cbrt(d3) * 1000;
+  document.getElementById('out-dia').innerText = isNaN(d) ? '--' : d.toFixed(1);
+}
+
+function typesetMath(el){
+  if(window.MathJax && MathJax.typesetPromise){
+    MathJax.typesetPromise(el ? [el] : undefined).catch(()=>{});
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  renderQuiz('quiz-container-u1','score-u1',QUIZ_DATA.u1,'سؤال');
+  renderQuiz('quiz-container-u2','score-u2',QUIZ_DATA.u2,'سؤال');
+  renderQuiz('quiz-container-u3','score-u3',QUIZ_DATA.u3,'سؤال');
+  renderQuiz('quiz-container-u4','score-u4',QUIZ_DATA.u4,'سؤال');
+  renderQuiz('quiz-container-pe1','score-pe1',QUIZ_DATA.pe1,'امتحان 1 · سؤال');
+  renderQuiz('quiz-container-pe2','score-pe2',QUIZ_DATA.pe2,'امتحان 2 · سؤال');
+  calcMarin();
+  calcShaft();
+  // Ensure LaTeX inside dynamically injected quizzes gets typeset once MathJax is ready
+  const waitForMathJax = setInterval(() => {
+    if(window.MathJax && MathJax.typesetPromise){
+      clearInterval(waitForMathJax);
+      MathJax.typesetPromise().catch(()=>{});
+    }
+  }, 300);
+});
+</script>
+</body>
+</html>
